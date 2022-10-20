@@ -40,6 +40,7 @@ const WhatWereBuildingSection = () => {
                 alt="Pebblesoft_img"
                 layout="fill"
                 objectFit="cover"
+                loading="eager"
               />
             </div>
             <h2 className="font-normal text-[20px] w-[600px] my-8">
@@ -90,6 +91,8 @@ const WhatWereBuildingSection = () => {
                 alt="Pebblesoft_img"
                 layout="fill"
                 objectFit="cover"
+                loading="eager"
+
               />
             </div>
             <h2 className="font-normal text-[20px] w-[600px] my-8">
@@ -142,6 +145,8 @@ const WhatWereBuildingSection = () => {
                 alt="Pebblesoft_img"
                 layout="fill"
                 objectFit="contain"
+                loading="eager"
+
               />
             </div>
             <h2 className="font-normal text-[20px] w-[600px] my-8">
