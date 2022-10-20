@@ -38,19 +38,19 @@ const Home: NextPage = () => {
 
         {/* Why we're here section */}
         <div className="w-full flex flex-col items-start px-20 font-alliance">
-          <div className="border-y-[1px] border-[#00000042] py-20">
+          <div className="border-y-[1px] border-[#00000042] py-20 w-full">
             <div className="w-full flex justify-between font-alliance">
               <h1 className="font-medium text-[60px]">Why we&lsquo;re here?</h1>
-              <p className="w-[330px] font-medium text-[24px]">
+              <p className="w-[330px] font-medium text-[24px] ">
                 We feel there’s a need for us to exist, and we think it takes a
                 different kind of company to solve these problems.{" "}
               </p>
             </div>
-            <h1 className="font-alliance font-normal text-[33px] max-w-[800px] mt-[150px]">
+            <h1 className="font-alliance font-normal text-[33px] max-w-[800px] mt-[150px] w-[1000px]">
               We believe with right technology and right people we can solve
               hard problems that face our societies and inhibit their potential.
             </h1>
-            <div className="w-full flex justify-between mt-20 gap-24 font-normal opacity-70">
+            <div className="flex justify-between mt-20 gap-24 font-normal opacity-70 w-[1000px]">
               <p className="w-full">
                 Today we see our society full of bureaucratic tasks and
                 processes that are systemic and mundane in nature, opposing
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <Link href="https://goo.gl/maps/5tKzppXgygzHiBzG6">
-              <p>Island of Hong Kong</p>
+              <p className="underline underline-offset-4">Island of Hong Kong</p>
               </Link>
             </div>
           </div>

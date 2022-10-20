@@ -26,7 +26,7 @@ const WhyWeDoSections = () => {
         />
         <WhatWeDoSections
           title={"We build our company around visionary engineering"}
-          p1={"We’re engineers on a mission. Nor developers neither academics."}
+          p1={"We’re engineers on a mission. Neither academics nor developers."}
           p2={
             "Engineering software systems is means to solve important problems. We have assembled a team that combines practical expertise in backend architectures, frontend engineering, user experience design, and data science. At Pebblesoft, we strive for a culture where every missionary is bound to execute ruthlessly in the service of the mission."
           }
