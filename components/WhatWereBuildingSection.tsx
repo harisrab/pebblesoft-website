@@ -14,9 +14,9 @@ const WhatWereBuildingSection = () => {
           </p>
         </div>
 
-        <div className="w-full pl-[300px] mt-32 font-alliance">
+        <div className="w-full mt-32 font-alliance flex items-end flex-col">
           {/* Future School OS */}
-          <div className="w-full border-y-steel border-y-[1px] border-opacity-40 py-10 flex flex-col">
+          <div className="w-[750px] border-y-steel border-y-[1px] border-opacity-40 py-10 flex flex-col">
             <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5">
               Future School Operating System
               <svg
@@ -64,7 +64,7 @@ const WhatWereBuildingSection = () => {
           </div>
 
           {/* Rentya */}
-          <div className="w-full border-y-steel border-y-[1px] border-opacity-40 py-10 flex flex-col">
+          <div className="w-[750px] border-y-steel border-y-[1px] border-t-0 border-opacity-40 py-10 flex flex-col">
             <Link href="https://rentya.co/">
               <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5">
                 Rentya
@@ -116,7 +116,7 @@ const WhatWereBuildingSection = () => {
           </div>
 
           {/* Dragon Prep */}
-          <div className="w-full border-y-steel border-y-[1px] border-opacity-40 py-10 flex flex-col">
+          <div className="w-[750px] border-y-steel border-y-[1px] border-t-0 border-opacity-40 py-10 flex flex-col">
             <Link href="https://dragon-prep.vercel.app/">
               <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5">
                 Dragon Prep - Online College Testing
