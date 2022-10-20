@@ -18,7 +18,7 @@ const WhatWeDoSections = ({ title, p1, p2, link }: WhatWeDoSectionsProps) => {
         <p>{p2}</p>
 
         {link && (
-          <div className="flex items-center gap-2 opacity-60 mt-5">
+          <div className="flex items-center gap-2 opacity-60  hover:opacity-40 duration-200 hover:cursor-pointer mt-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -33,7 +33,7 @@ const WhatWeDoSections = ({ title, p1, p2, link }: WhatWeDoSectionsProps) => {
                 d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
               />
             </svg>
-            <p className="underline">{`${link}`}</p>
+            <p className="underline ">{`${link}`}</p>
           </div>
         )}
       </div>

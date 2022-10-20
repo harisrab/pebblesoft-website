@@ -17,7 +17,7 @@ const WhatWereBuildingSection = () => {
         <div className="w-full mt-32 font-alliance flex items-end flex-col">
           {/* Future School OS */}
           <div className="w-[750px] border-y-steel border-y-[1px] border-opacity-40 py-10 flex flex-col">
-            <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5">
+            <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
               Future School Operating System
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ const WhatWereBuildingSection = () => {
           {/* Rentya */}
           <div className="w-[750px] border-y-steel border-y-[1px] border-t-0 border-opacity-40 py-10 flex flex-col">
             <Link href="https://rentya.co/">
-              <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5">
+              <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5 hover:opacity-70 hover:cursor-pointer duration-200">
                 Rentya
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ const WhatWereBuildingSection = () => {
           {/* Dragon Prep */}
           <div className="w-[750px] border-y-steel border-y-[1px] border-t-0 border-opacity-40 py-10 flex flex-col">
             <Link href="https://dragon-prep.vercel.app/">
-              <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5">
+              <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5 hover:opacity-70 hover:cursor-pointer duration-200">
                 Dragon Prep - Online College Testing
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -97,7 +97,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <Link href="https://goo.gl/maps/5tKzppXgygzHiBzG6">
-              <p className="underline underline-offset-4">Island of Hong Kong</p>
+              <p className="underline underline-offset-4 hover:opacity-80 duration-200 hover:cursor-pointer">Island of Hong Kong</p>
               </Link>
             </div>
           </div>
