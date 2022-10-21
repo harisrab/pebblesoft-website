@@ -92,7 +92,6 @@ const WhatWereBuildingSection = () => {
                 layout="fill"
                 objectFit="cover"
                 loading="eager"
-
               />
             </div>
             <h2 className="font-normal text-[20px] w-[600px] my-8">
@@ -146,7 +145,6 @@ const WhatWereBuildingSection = () => {
                 layout="fill"
                 objectFit="contain"
                 loading="eager"
-
               />
             </div>
             <h2 className="font-normal text-[20px] w-[600px] my-8">

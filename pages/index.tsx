@@ -1,10 +1,10 @@
-import { Player } from "@lottiefiles/react-lottie-player";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Logo from "../components/Logo";
 import LogoWhite from "../components/LogoWhite";
 import NavBar from "../components/NavBar";
+import Originating from "../components/Originating";
 import WhatWeDoSections from "../components/WhatWeDoSections";
 import WhatWereBuildingSection from "../components/WhatWereBuildingSection";
 import WhyWeDoSections from "../components/WhyWeDoSections";
@@ -85,22 +85,7 @@ const Home: NextPage = () => {
               Founded in 2022 © All rights reserved.
             </p>
           </div>
-          <div className="text-[#fff] font-alliance flex justify-center flex-col">
-            <p className="opacity-60 pl-1">Originating from</p>
-            <div className="flex items-center gap-2">
-              <div className="w-[30px] h-[30px] flex items-center justify-center">
-                <Player
-                  src="https://assets6.lottiefiles.com/packages/lf20_rg0LWh4nld.json"
-                  className="player"
-                  loop
-                  autoplay
-                />
-              </div>
-              <Link href="https://goo.gl/maps/5tKzppXgygzHiBzG6">
-              <p className="underline underline-offset-4 hover:opacity-80 duration-200 hover:cursor-pointer">Island of Hong Kong</p>
-              </Link>
-            </div>
-          </div>
+          <Originating />
         </div>
       </div>
     </div>
