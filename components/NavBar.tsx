@@ -24,6 +24,17 @@ const item = {
   },
 };
 
+const subtitle = {
+  hidden: { opacity: 0, width: 0 },
+  show: {
+    opacity: 1,
+    width: "100px",
+    transition: { duration: 1.5, type: "spring" },
+  },
+};
+
+
+
 const NavBar = () => {
   const [menuBtn, setMenuBtn] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
@@ -51,11 +62,13 @@ const NavBar = () => {
                   variants={item}
                   className="w-[500px] bg-[#fff] h-[1px] opacity-50"
                 ></motion.div>
-                <div className="overflow-hidden relative h-7">
-                  <motion.p variants={item} className="text-[14px] absolute">
+                <motion.div 
+                variants={subtitle}
+                className="overflow-hidden relative h-7 flex items-center mt-[2px]">
+                  <motion.p className="text-[14px] absolute  opacity-50">
                     Navigation
                   </motion.p>
-                </div>
+                </motion.div>
               </div>
 
               <motion.ul
