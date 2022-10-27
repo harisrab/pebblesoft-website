@@ -3,10 +3,14 @@ import WhatWeDoSections from "./WhatWeDoSections";
 
 const WhyWeDoSections = () => {
   return (
-    <div className=" w-full flex flex-col items-start px-8 sm:px-20 mt-[80px] sm:mt-20">
+    <div className="relative w-full flex flex-col items-start px-8 sm:px-20 mt-[80px] sm:mt-20">
+      <div id="what-we-do" className="absolute top-[-200px]"></div>
+
       <div className="border-b-[1px] border-[#00000042] sm:pb-20 w-full">
         <div className="w-full flex flex-col sm:flex-row justify-between font-alliance">
-          <h1 className="font-medium text-[40px] sm:text-[60px]">What we do?</h1>
+          <h1 className="font-medium text-[40px] sm:text-[60px]">
+            What we do?
+          </h1>
           <p className="w-full mt-10 sm:mt-0 sm:w-[300px] font-medium text-[20px] sm:text-[24px]">
             We’re building software experiences that advance human progress.
           </p>

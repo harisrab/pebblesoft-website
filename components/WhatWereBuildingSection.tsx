@@ -4,10 +4,14 @@ import React from "react";
 
 const WhatWereBuildingSection = () => {
   return (
-    <div className=" w-full flex flex-col items-start px-8 sm:px-20 mt-20">
+    <div className="relative w-full flex flex-col items-start px-8 sm:px-20 mt-20">
+      <div id="what-were-building" className="absolute top-[-200px]"></div>
+
       <div className="border-b-[1px] border-[#00000042] pb-20 w-full">
         <div className="w-full flex flex-col justify-between font-alliance">
-          <h1 className="font-medium text-[40px] sm:text-[60px]">{"What we're building?"}</h1>
+          <h1 className="font-medium text-[40px] sm:text-[60px]">
+            {"What we're building?"}
+          </h1>
           <p className="sm:w-[500px] font-medium text-[20px] sm:text-[24px] mt-10">
             We at Pebblesoft make results beautiful. And the effort invisible.
             Doing only the work that we consider great work.

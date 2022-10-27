@@ -2,6 +2,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 import Originating from "./Originating";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const container = {
   hidden: { opacity: 1 },
@@ -13,6 +14,13 @@ const container = {
       duration: 0.05,
     },
   },
+  exit: {
+    opacity: 0,
+    transition: {
+      when: "beforeChildren",
+      delay: 0.2,
+    },
+  },
 };
 
 const item = {
@@ -20,6 +28,11 @@ const item = {
   show: {
     opacity: 1,
     bottom: 0,
+    transition: { duration: 1.5, type: "spring" },
+  },
+  exit: {
+    opacity: 0,
+    bottom: -30,
     transition: { duration: 1.5, type: "spring" },
   },
 };
@@ -31,9 +44,12 @@ const subtitle = {
     width: "100px",
     transition: { duration: 1.5, type: "spring" },
   },
+  exit: {
+    opacity: 0,
+    width: "0px",
+    transition: { duration: 1.5, type: "spring" },
+  },
 };
-
-
 
 const NavBar = () => {
   const [menuBtn, setMenuBtn] = useState(false);
@@ -48,23 +64,33 @@ const NavBar = () => {
       id="nav-bar"
       className="sticky top-0 w-full h-[150px] bg-red-100 flex items-center justify-between px-8 sm:px-20 z-[10000]"
     >
-      {menuActive && (
-        <div className="absolute w-full h-screen bg-steel left-0 top-0 z-[0] flex flex-col justify-center px-8 sm:pl-[200px]">
-          <AnimatePresence>
+      <AnimatePresence>
+        {menuActive && (
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            className="absolute w-full h-screen bg-steel left-0 top-0 z-[0] flex flex-col justify-center px-8 sm:pl-[200px]"
+          >
             <motion.div
-              variants={container}
+              key="23423423"
               initial="hidden"
               animate="show"
+              exit="exit"
               className="flex flex-col justify-between font-alliance text-[#fff]"
             >
               <div>
                 <motion.div
+                  key="2sd3423423"
                   variants={item}
                   className="sm:w-[500px] bg-[#fff] h-[1px] bg-opacity-30 sm:opacity-50"
                 ></motion.div>
-                <motion.div 
-                variants={subtitle}
-                className="overflow-hidden relative h-7 flex items-center mt-[2px]">
+                <motion.div
+                  key="2sd3423423sdf"
+                  variants={subtitle}
+                  className="overflow-hidden relative h-7 flex items-center mt-[2px]"
+                >
                   <motion.p className="text-[14px] absolute  opacity-50">
                     Navigation
                   </motion.p>
@@ -72,37 +98,60 @@ const NavBar = () => {
               </div>
 
               <motion.ul
+                key="2sd3423423sdfsf"
                 variants={container}
                 initial="hidden"
                 animate="show"
                 className="flex relative flex-col gap-3 font-alliance font-medium text-[#fff] text-[26px] pl-[30px] sm:pl-[100px] py-20"
               >
-                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
-                  <motion.li
-                    variants={item}
-                    className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
+                <Link
+                  // onClick={() => setMenuActive(false)}
+                  href="#why-were-here"
+                >
+                  <div
+                    onClick={() => setMenuActive(false)}
+                    className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]"
                   >
-                    {"Why we're here"}
-                  </motion.li>
-                </div>
-                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
-                  <motion.li
-                    variants={item}
-                    className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
+                    <motion.li
+                      key="2sd3423423sdfsfsdf"
+                      variants={item}
+                      className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
+                    >
+                      {"Why we're here?"}
+                    </motion.li>
+                  </div>
+                </Link>
+                <Link href={"#what-we-do"}>
+                  <div
+                    onClick={() => setMenuActive(false)}
+                    className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]"
                   >
-                    {"What we do?"}
-                  </motion.li>
-                </div>
-                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
-                  <motion.li
-                    variants={item}
-                    className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
+                    <motion.li
+                      key="2sd3423423sdfsfsdfsdf"
+                      variants={item}
+                      className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
+                    >
+                      {"What we do?"}
+                    </motion.li>
+                  </div>
+                </Link>
+                <Link href="#what-were-building">
+                  <div
+                    onClick={() => setMenuActive(false)}
+                    className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]"
                   >
-                    {"What we're building?"}
-                  </motion.li>
-                </div>
+                    <motion.li
+                      key="2sd3423423sdfsfsdfsdfsdf"
+                      variants={item}
+                      className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
+                    >
+                      {"What we're building?"}
+                    </motion.li>
+                  </div>
+                </Link>
                 <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
                   <motion.li
+                    key="2sd3423423sdfsfsdfsdfsdfdfsd"
                     variants={item}
                     className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
                   >
@@ -111,9 +160,9 @@ const NavBar = () => {
                 </div>
               </motion.ul>
             </motion.div>
-          </AnimatePresence>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div id="logo" className="z-[1000]">
         <Logo menuActive={menuActive} />
       </div>

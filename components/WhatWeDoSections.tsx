@@ -14,7 +14,9 @@ const WhatWeDoSections = ({ title, p1, p2, link }: WhatWeDoSectionsProps) => {
       </h1>
 
       <div className="flex flex-col gap-10 sm:gap-6 text-steel w-full sm:w-[500px] font-alliance">
-        <p className="font-normal text-[20px] mt-5 sm:mt-0 sm:text-[28px]">{p1}</p>
+        <p className="font-normal text-[20px] mt-5 sm:mt-0 sm:text-[28px]">
+          {p1}
+        </p>
         <p className="">{p2}</p>
 
         {link && (

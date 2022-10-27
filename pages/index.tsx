@@ -34,17 +34,22 @@ const Home: NextPage = () => {
               <span className="text-steel"> function </span>
             </h1>
 
-            <button className={`border w-[200px] items-center flex sm:hidden text-[#fff] ${"bg-steel hover:text-[#fff] border-steel"} px-14 py-2 hover:bg-steel mt-10  duration-200`}>
-          Get started
-        </button>
+            <button
+              className={`border w-[200px] items-center flex sm:hidden text-[#fff] ${"bg-steel hover:text-[#fff] border-steel"} px-14 py-2 hover:bg-steel mt-10  duration-200`}
+            >
+              Get started
+            </button>
           </div>
         </div>
 
         {/* Why we're here section */}
         <div className="w-full flex flex-col items-start px-8 sm:px-20  font-alliance">
           <div className="border-y-[1px] border-[#7777772c] py-20 pb-[180px] sm:pb-20 w-full">
-            <div className="w-full flex flex-col sm:flex-row justify-between font-alliance">
-              <h1 className="font-medium text-[40px] mb-10 sm:mb-0 sm:text-[60px]">Why we&lsquo;re here?</h1>
+            <div className="relative w-full flex flex-col sm:flex-row justify-between font-alliance">
+              <div id="why-were-here" className="absolute top-[-200px]"></div>
+              <h1 className="font-medium text-[40px] mb-10 sm:mb-0 sm:text-[60px]">
+                Why we&lsquo;re here?
+              </h1>
               <p className="w-full sm:w-[330px] font-medium text-[20px] sm:text-[24px] ">
                 We feel there’s a need for us to exist, and we think it takes a
                 different kind of company to solve these problems.{" "}
