@@ -4,11 +4,11 @@ import React from "react";
 
 const WhatWereBuildingSection = () => {
   return (
-    <div className=" w-full flex flex-col items-start px-20 mt-20">
+    <div className=" w-full flex flex-col items-start px-8 sm:px-20 mt-20">
       <div className="border-b-[1px] border-[#00000042] pb-20 w-full">
         <div className="w-full flex flex-col justify-between font-alliance">
-          <h1 className="font-medium text-[60px]">{"What we're building?"}</h1>
-          <p className="w-[500px] font-medium text-[24px] mt-10">
+          <h1 className="font-medium text-[40px] sm:text-[60px]">{"What we're building?"}</h1>
+          <p className="sm:w-[500px] font-medium text-[20px] sm:text-[24px] mt-10">
             We at Pebblesoft make results beautiful. And the effort invisible.
             Doing only the work that we consider great work.
           </p>
@@ -16,8 +16,8 @@ const WhatWereBuildingSection = () => {
 
         <div className="w-full mt-32 font-alliance flex items-end flex-col">
           {/* Future School OS */}
-          <div className="w-[750px] border-y-steel border-y-[1px] border-opacity-40 py-10 flex flex-col">
-            <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
+          <div className="sm:w-[750px] border-y-[#a3a3a32b] sm:border-y-[#c0c0c02b] border-y-[1px] border-opacity-40 py-10 flex flex-col">
+            <h1 className="font-medium text-[18px] sm:text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
               Future School Operating System
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ const WhatWereBuildingSection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-4 h-4 sm:w-6 sm:h-6"
               >
                 <path
                   strokeLinecap="round"
@@ -34,7 +34,7 @@ const WhatWereBuildingSection = () => {
                 />
               </svg>
             </h1>
-            <div className="w-full h-[400px] relative z-0">
+            <div className="w-full h-[200px] sm:h-[400px] relative z-0">
               <Image
                 src={"/fsOS.png"}
                 alt="Pebblesoft_img"
@@ -43,12 +43,12 @@ const WhatWereBuildingSection = () => {
                 loading="eager"
               />
             </div>
-            <h2 className="font-normal text-[20px] w-[600px] my-8">
+            <h2 className="font-medium text-[16px] sm:w-[600px] my-8">
               Remote classrooms with online teachers.<br></br> Villagers too can
               have world class teaching experiences.
             </h2>
 
-            <div className="w-full flex opacity-60 gap-10 text-[14px]">
+            <div className="w-full flex flex-col sm:flex-row opacity-60 gap-10 text-[14px]">
               <p className="w-full">
                 We believe the major bottleneck to people’s prosperity is their
                 in-ability to communicate in English language and mastery over
@@ -65,9 +65,9 @@ const WhatWereBuildingSection = () => {
           </div>
 
           {/* Rentya */}
-          <div className="w-[750px] border-y-steel border-y-[1px] border-t-0 border-opacity-40 py-10 flex flex-col">
+          <div className="sm:w-[750px] pt-[100px] sm:pt-10 border-y-[#a3a3a32b] sm:border-b-[#c0c0c02b] border-b-[1px] border-opacity-40 py-10 flex flex-col">
             <Link href="https://rentya.co/">
-              <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5 hover:opacity-70 hover:cursor-pointer duration-200">
+              <h1 className="font-medium text-[18px] sm:text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
                 Rentya
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const WhatWereBuildingSection = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-4 h-4 sm:w-6 sm:h-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -85,7 +85,7 @@ const WhatWereBuildingSection = () => {
                 </svg>
               </h1>
             </Link>
-            <div className="w-full h-[400px] relative z-0">
+            <div className="w-full h-[200px] sm:h-[400px] relative z-0">
               <Image
                 src={"/rentya.png"}
                 alt="Pebblesoft_img"
@@ -94,12 +94,12 @@ const WhatWereBuildingSection = () => {
                 loading="eager"
               />
             </div>
-            <h2 className="font-normal text-[20px] w-[600px] my-8">
+            <h2 className="font-medium text-[16px] sm:w-[600px] my-8">
               Everything for everyone. <br></br>
               Changing how ownership works
             </h2>
 
-            <div className="w-full flex opacity-60 gap-10 text-[14px]">
+            <div className="w-full flex flex-col sm:flex-row opacity-60 gap-10 text-[14px]">
               <p className="w-full">
                 We enable people to flexibly rent any product at fractional
                 price of original cost. This is a platform for people to
@@ -118,9 +118,9 @@ const WhatWereBuildingSection = () => {
           </div>
 
           {/* Dragon Prep */}
-          <div className="w-[750px] border-y-steel border-y-[1px] border-t-0 border-opacity-40 py-10 flex flex-col">
+          <div className="sm:w-[750px] pt-[100px] sm:pt-10 border-b-[#c0c0c02b] sm:border-y-[#c0c0c02b] border-b-[1px] border-opacity-40 py-10 flex flex-col">
             <Link href="https://dragon-prep.vercel.app/">
-              <h1 className="font-medium text-[26px] mb-5 flex items-center gap-5 hover:opacity-70 hover:cursor-pointer duration-200">
+              <h1 className="font-medium text-[18px] sm:text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
                 Dragon Prep - Online College Testing
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ const WhatWereBuildingSection = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-4 h-4 sm:w-6 sm:h-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -138,7 +138,7 @@ const WhatWereBuildingSection = () => {
                 </svg>
               </h1>
             </Link>
-            <div className="w-full h-[400px] relative z-0">
+            <div className="w-full h-[200px] sm:h-[400px] relative z-0">
               <Image
                 src={"/dragonprep.png"}
                 alt="Pebblesoft_img"
@@ -147,12 +147,12 @@ const WhatWereBuildingSection = () => {
                 loading="eager"
               />
             </div>
-            <h2 className="font-normal text-[20px] w-[600px] my-8">
+            <h2 className="font-medium text-[16px] sm:w-[600px] my-8">
               SAT Test has moved online. <br></br>
               We give elite preparation to compete at highest level.
             </h2>
 
-            <div className="w-full flex opacity-60 gap-10 text-[14px]">
+            <div className="w-full flex flex-col sm:flex-row opacity-60 gap-10 text-[14px]">
               <p className="w-full">
                 Major standardized tests are moving online and there’s a need
                 for a platform that gamifies the experience of private test

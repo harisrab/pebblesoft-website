@@ -46,10 +46,10 @@ const NavBar = () => {
   return (
     <div
       id="nav-bar"
-      className="sticky top-0 w-full h-[150px] bg-red-100 flex items-center justify-between px-20 z-[10000]"
+      className="sticky top-0 w-full h-[150px] bg-red-100 flex items-center justify-between px-8 sm:px-20 z-[10000]"
     >
       {menuActive && (
-        <div className="absolute w-full h-screen bg-steel left-0 top-0 z-[0] flex flex-col justify-center pl-[200px]">
+        <div className="absolute w-full h-screen bg-steel left-0 top-0 z-[0] flex flex-col justify-center px-8 sm:pl-[200px]">
           <AnimatePresence>
             <motion.div
               variants={container}
@@ -60,7 +60,7 @@ const NavBar = () => {
               <div>
                 <motion.div
                   variants={item}
-                  className="w-[500px] bg-[#fff] h-[1px] opacity-50"
+                  className="sm:w-[500px] bg-[#fff] h-[1px] bg-opacity-30 sm:opacity-50"
                 ></motion.div>
                 <motion.div 
                 variants={subtitle}
@@ -75,9 +75,9 @@ const NavBar = () => {
                 variants={container}
                 initial="hidden"
                 animate="show"
-                className="flex relative flex-col gap-3 font-alliance font-medium text-[#fff] text-[26px] pl-[100px] py-20"
+                className="flex relative flex-col gap-3 font-alliance font-medium text-[#fff] text-[26px] pl-[30px] sm:pl-[100px] py-20"
               >
-                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 w-[400px]">
+                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
                   <motion.li
                     variants={item}
                     className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
@@ -85,7 +85,7 @@ const NavBar = () => {
                     {"Why we're here"}
                   </motion.li>
                 </div>
-                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 w-[400px]">
+                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
                   <motion.li
                     variants={item}
                     className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
@@ -93,7 +93,7 @@ const NavBar = () => {
                     {"What we do?"}
                   </motion.li>
                 </div>
-                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 w-[400px]">
+                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
                   <motion.li
                     variants={item}
                     className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
@@ -101,7 +101,7 @@ const NavBar = () => {
                     {"What we're building?"}
                   </motion.li>
                 </div>
-                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 w-[400px]">
+                <div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
                   <motion.li
                     variants={item}
                     className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
@@ -122,7 +122,7 @@ const NavBar = () => {
         className="flex items-center gap-6 font-alliance font-normal z-[1000]"
       >
         <button
-          className={`border ${
+          className={`border hidden sm:flex ${
             menuActive
               ? "bg-transparent hover:bg-[#fff] text-[#fff] hover:text-steel border-[#fff]"
               : "bg-[#fff] hover:text-[#fff] border-steel"

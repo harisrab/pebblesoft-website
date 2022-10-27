@@ -4,7 +4,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 const Originating = () => {
   return (
-    <div className="text-[#fff] font-alliance flex justify-center flex-col">
+    <div className="text-[#fff] font-alliance justify-center flex-col hidden sm:flex">
       <p className="opacity-60 pl-1">Originating from</p>
       <div className="flex items-center gap-2">
         <div className="w-[30px] h-[30px] flex items-center justify-center">
