@@ -123,7 +123,7 @@ const WhatWereBuildingSection = () => {
 
           {/* Dragon Prep */}
           <div className="sm:w-[750px] pt-[100px] sm:pt-10 border-b-[#c0c0c02b] sm:border-y-[#c0c0c02b] border-b-[1px] border-opacity-40 py-10 flex flex-col">
-            <Link href="https://dragon-prep.vercel.app/">
+            <Link href="https://dragonprep.com/">
               <h1 className="font-medium text-[18px] sm:text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
                 Dragon Prep - Online College Testing
                 <svg
