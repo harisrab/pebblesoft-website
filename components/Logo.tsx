@@ -2,11 +2,22 @@ import React from "react";
 
 type LogoProps = {
 	menuActive: boolean;
+	setMenuActive: (args0: boolean) => void;
 	contactUs: boolean;
+	setContactUs: (args0: boolean) => void;
 };
-const Logo = ({ menuActive, contactUs }: LogoProps) => {
+const Logo = ({
+	menuActive,
+	setMenuActive,
+	contactUs,
+	setContactUs,
+}: LogoProps) => {
 	return (
 		<svg
+			onClick={() => {
+				setMenuActive(false);
+				setContactUs(false);
+			}}
 			width="140"
 			height="34"
 			viewBox="0 0 213 34"

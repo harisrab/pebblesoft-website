@@ -37,7 +37,12 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
 				{contactUs && <ContactUs />}
 			</AnimatePresence>
 			<div id="logo" className="z-[1000]">
-				<Logo menuActive={menuActive} contactUs={contactUs} />
+				<Logo
+					menuActive={menuActive}
+					setMenuActive={setMenuActive}
+					contactUs={contactUs}
+					setContactUs={setContactUs}
+				/>
 			</div>
 			<div
 				id="right-btns"
