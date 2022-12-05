@@ -42,6 +42,9 @@ const Home: NextPage = () => {
           </div>
         </div>
 
+          {/* What we're building? */}
+        <WhatWereBuildingSection />
+
         {/* Why we're here section */}
         <div className="w-full flex flex-col items-start px-8 sm:px-20  font-alliance">
           <div className="border-y-[1px] border-[#7777772c] py-20 pb-[180px] sm:pb-20 w-full">
@@ -83,8 +86,7 @@ const Home: NextPage = () => {
         {/* Why we do? section */}
         <WhyWeDoSections />
 
-        {/* What we're building? */}
-        <WhatWereBuildingSection />
+      
 
         {/* Footer */}
         <div className="w-full  sm:h-[200px] bg-steel flex flex-col sm:flex-row items-center justify-between px-8 py-20 sm:py-0 sm:px-20">
