@@ -46,6 +46,16 @@ const WhatWereBuildingSection = () => {
 			descTwo:
 				"We work closely with our partners at Dragon Prep, where their deep understanding of test taking space, and our expertise in engineering frontend for applications and developing robust backend architectures combines to make that move into new market as effortless as possible.",
 		},
+		{
+			title: "The Dating Arts",
+			link: "https://www.thedatingarts.com",
+			images: ["/tda/main.png"],
+			blurb: "Pandemic has made relationships difficult.\nWe refashion men, turning them into virtuosos of game.",
+			descOne:
+				"For over a decade, The Dating Arts has secured its highly acclaimed reputation as the premier dating and social strategy consulting agency for professionals looking to better their lifestyles, social skills, and relationships with a goal to live and date fearlessly.",
+			descTwo:
+				"The Dating Arts has helped thousands of clients who are having issues with dating and social dynamics discover the proper mindset and systems to overcome their insecurities so they can have amazing, long-lasting connections and moments with the kinds of relationships they desire.",
+		},
 
 		// {
 		// 	title: "Future School Operating System",
@@ -141,7 +151,7 @@ const WhatWereBuildingSection = () => {
 									<p className="w-full">{descOne}</p>
 									<p className="w-full">{descTwo}</p>
 								</div>
-                <div className="w-full h-20 sm:hidden"></div>
+								<div className="w-full h-20 sm:hidden"></div>
 							</div>
 						)
 					)}
