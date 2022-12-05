@@ -100,11 +100,16 @@ const WhatWereBuildingSection = () => {
 
 								<div className="w-full h-[200px] sm:h-[400px] relative z-0">
 									<div className="absolute top-0 left-0 w-full bg-steel h-full overflow-hidden">
-										<Slider {...settings} autoplay={true}
-                    autoplaySpeed={3000}
-                    >
+										<Slider
+											{...settings}
+											autoplay={true}
+											autoplaySpeed={3000}
+										>
 											{images.map((img, i) => (
-												<div className="w-full h-full">
+												<div
+													key={img + i}
+													className="w-full h-full"
+												>
 													{/* <Image
 														src={img}
 														alt="Pebblesoft_img"
