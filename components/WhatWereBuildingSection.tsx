@@ -109,7 +109,7 @@ const WhatWereBuildingSection = () => {
 								</Link>
 
 								<div className="w-full h-[200px] sm:h-[400px] relative z-0">
-									<div className="absolute top-0 left-0 w-full bg-steel h-full overflow-hidden">
+									<div className="absolute top-0 left-0 w-full  h-full overflow-hidden">
 										<Slider
 											{...settings}
 											autoplay={true}
