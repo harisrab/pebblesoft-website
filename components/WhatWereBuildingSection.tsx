@@ -8,7 +8,7 @@ const WhatWereBuildingSection = () => {
     {
       title: "Rentya",
       images: ["/rentya/main.png", "/rentya/pay-until-you-own-it.png", "/rentya/rent-it-like-you-own-it.png", "/rentya/zero-deposits.png", "/rentya/rentya-protect.png"],
-      blurb: "Everything for everyone. Changing how ownership works.",
+      blurb: "Everything for everyone.<br></br>Changing how ownership works.",
       descOne: "We enable people to flexibly rent any product at fractional price of original cost. This is a platform for people to subscribe and rent products that they otherwise can’t afford to buy. Purchase of expensive products leaves people throwing them away and selling for low price. There exists no mechanism to rent and return.",
       descTwo:"There are major problems of trust building, damage protections, and recycling when products are circulated on such platforms, and Rentya is being designed, built, and deployed to solve these major challenges.",
     },
@@ -50,6 +50,7 @@ const WhatWereBuildingSection = () => {
           <div
           key={index}
           className="sm:w-[750px] border-y-[#a3a3a32b] sm:border-y-[#c0c0c02b] border-y-[1px] border-opacity-40 py-10 flex flex-col">
+
 <h1 className="font-medium text-[18px] sm:text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
               {title}
               <svg
@@ -77,7 +78,7 @@ const WhatWereBuildingSection = () => {
                 loading="eager"
               />
             </div>
-            <h2 className="font-medium text-[16px] sm:w-[600px] my-8">
+            <h2 className="font-medium text-[16px] sm:w-[600px] my-8 sm:text-[18px]">
               {blurb}
             </h2>
 
