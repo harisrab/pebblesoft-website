@@ -46,7 +46,9 @@ const WhatWereBuildingSection = () => {
 
         <div className="w-full mt-32 font-alliance flex items-end flex-col">
           {projects.map(({title, images, blurb, descOne, descTwo}, index) => (
-          <div className="sm:w-[750px] border-y-[#a3a3a32b] sm:border-y-[#c0c0c02b] border-y-[1px] border-opacity-40 py-10 flex flex-col">
+          <div
+          key={index}
+          className="sm:w-[750px] border-y-[#a3a3a32b] sm:border-y-[#c0c0c02b] border-y-[1px] border-opacity-40 py-10 flex flex-col">
 <h1 className="font-medium text-[18px] sm:text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
               {title}
               <svg
