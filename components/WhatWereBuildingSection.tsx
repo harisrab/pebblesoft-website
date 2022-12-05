@@ -21,6 +21,7 @@ const WhatWereBuildingSection = () => {
 	const projects = [
 		{
 			title: "Rentya",
+			link: "https://www.rentya.co",
 			images: [
 				"/rentya/main.png",
 				"/rentya/pay-until-you-own-it.png",
@@ -37,6 +38,7 @@ const WhatWereBuildingSection = () => {
 
 		{
 			title: "Dragon Prep – Online College Testing Platform",
+			link: "https://www.dragonprep.com",
 			images: ["/dp/main.png", "/dp/1.png", "/dp/2.png", "/dp/3.png"],
 			blurb: "SAT Test has moved online.\nWe give elite preparation to compete at highest level.",
 			descOne:
@@ -76,28 +78,35 @@ const WhatWereBuildingSection = () => {
 
 				<div className="w-full mt-32 font-alliance flex items-end flex-col">
 					{projects.map(
-						({ title, images, blurb, descOne, descTwo }, index) => (
+						(
+							{ title, link, images, blurb, descOne, descTwo },
+							index
+						) => (
 							<div
 								key={index}
 								className="sm:w-[750px] border-y-[#a3a3a32b] sm:border-y-[#c0c0c02b] border-y-[1px] border-opacity-40 py-10 flex flex-col"
 							>
-								<h1 className="font-medium text-[18px] sm:text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
-									{title}
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth={1.5}
-										stroke="currentColor"
-										className="w-4 h-4 sm:w-6 sm:h-6"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-										/>
-									</svg>
-								</h1>
+								<Link href={link}>
+									<a target={"_blank"}>
+										<h1 className="font-medium text-[18px] sm:text-[26px] mb-5 flex items-center gap-5  hover:opacity-70 hover:cursor-pointer duration-200">
+											{title}
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												strokeWidth={1.5}
+												stroke="currentColor"
+												className="w-4 h-4 sm:w-6 sm:h-6"
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+												/>
+											</svg>
+										</h1>
+									</a>
+								</Link>
 
 								<div className="w-full h-[200px] sm:h-[400px] relative z-0">
 									<div className="absolute top-0 left-0 w-full bg-steel h-full overflow-hidden">
