@@ -47,7 +47,7 @@ const WhatWereBuildingSection = () => {
 				"We work closely with our partners at Dragon Prep, where their deep understanding of test taking space, and our expertise in engineering frontend for applications and developing robust backend architectures combines to make that move into new market as effortless as possible.",
 		},
 		{
-			title: "The Dating Arts",
+			title: "The Dating Arts – The Art of Game",
 			link: "https://www.thedatingarts.com",
 			images: ["/tda/main.png"],
 			blurb: "Pandemic has made relationships difficult.\nWe refashion men, turning them into virtuosos of game.",
