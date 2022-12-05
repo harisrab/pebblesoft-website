@@ -6,10 +6,9 @@ import Link from "next/link";
 import MainMenu from "./MainMenu";
 import ContactUs from "./ContactUs";
 
-const NavBar = () => {
+const NavBar = ({ contactUs, setContactUs }: any) => {
 	const [menuBtn, setMenuBtn] = useState(false);
 	const [menuActive, setMenuActive] = useState(false);
-	const [contactUs, setContactUs] = useState(false);
 
 	const handleMenuPop = () => {
 		setContactUs(false);
@@ -27,7 +26,13 @@ const NavBar = () => {
 			className="sticky top-0 w-full h-[150px] bg-red-100 flex items-center justify-between px-8 sm:px-20 z-[10000]"
 		>
 			<AnimatePresence>
-				{menuActive && <MainMenu setMenuActive={setMenuActive} />}
+				{menuActive && (
+					<MainMenu
+						contactUs={contactUs}
+						setContactUs={setContactUs}
+						setMenuActive={setMenuActive}
+					/>
+				)}
 
 				{contactUs && <ContactUs />}
 			</AnimatePresence>

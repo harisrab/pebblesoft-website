@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-const MainMenu = ({ setMenuActive }: any) => {
+const MainMenu = ({ contactUs, setContactUs, setMenuActive }: any) => {
 	const container = {
 		hidden: { opacity: 1 },
 		show: {
@@ -141,15 +141,17 @@ const MainMenu = ({ setMenuActive }: any) => {
 						</a>
 					</Link>
 
-					<div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
-						<motion.li
-							key="2sd3423423sdfsfsdfsdfsdfdfsd"
-							variants={item}
-							className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
-						>
-							{"Talk to us"}
-						</motion.li>
-					</div>
+					<a onClick={() => setContactUs(true)}>
+						<div className="overflow-hidden relative h-10 hover:cursor-pointer hover:opacity-50 duration-200 sm:w-[400px]">
+							<motion.li
+								key="2sd3423423sdfsfsdfsdfsdfdfsd"
+								variants={item}
+								className="hover:cursor-pointer absolute hover:opacity-50 duration-200"
+							>
+								{"Talk to us"}
+							</motion.li>
+						</div>
+					</a>
 				</motion.ul>
 			</motion.div>
 		</motion.div>

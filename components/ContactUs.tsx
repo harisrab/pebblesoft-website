@@ -119,12 +119,12 @@ const ContactUs = () => {
 				</div>
 			) : (
 				<form onSubmit={handleSubmission}>
-					<h1 className="font-alliance font-medium text-[30px] text-[#fff] mb-10">
+					<h1 className="font-alliance font-medium text-[24px] sm:text-[30px] text-[#fff] mb-10">
 						Want to solve problems with Pebblesoft?
 					</h1>
 
 					<div className="max-w-[650px] flex flex-col gap-3">
-						<div className="flex gap-10">
+						<div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
 							<TextField
 								fullWidth
 								sx={customTextFieldStyles}
@@ -136,19 +136,21 @@ const ContactUs = () => {
 									setFirstName(e.currentTarget.value)
 								}
 							/>
-							<TextField
-								fullWidth
-								sx={customTextFieldStyles}
-								id="standard-basic"
-								label="Last Name"
-								variant="standard"
-								value={lastName}
-								onChange={(e) =>
-									setLastName(e.currentTarget.value)
-								}
-							/>
+							<div className="hidden sm:flex">
+								<TextField
+									fullWidth
+									sx={customTextFieldStyles}
+									id="standard-basic"
+									label="Last Name"
+									variant="standard"
+									value={lastName}
+									onChange={(e) =>
+										setLastName(e.currentTarget.value)
+									}
+								/>
+							</div>
 						</div>
-						<div className="flex gap-10">
+						<div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
 							<TextField
 								fullWidth
 								sx={customTextFieldStyles}
@@ -172,7 +174,7 @@ const ContactUs = () => {
 								}
 							/>
 						</div>
-						<div className="flex gap-10">
+						<div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
 							<TextField
 								fullWidth
 								sx={customTextFieldStyles}
@@ -184,17 +186,19 @@ const ContactUs = () => {
 									setCompany(e.currentTarget.value)
 								}
 							/>
-							<TextField
-								fullWidth
-								sx={customTextFieldStyles}
-								id="standard-basic"
-								label="Country"
-								variant="standard"
-								value={country}
-								onChange={(e) =>
-									setCountry(e.currentTarget.value)
-								}
-							/>
+							<div className="hidden sm:flex">
+								<TextField
+									fullWidth
+									sx={customTextFieldStyles}
+									id="standard-basic"
+									label="Country"
+									variant="standard"
+									value={country}
+									onChange={(e) =>
+										setCountry(e.currentTarget.value)
+									}
+								/>
+							</div>
 						</div>
 
 						<h2 className="font-alliance text-[#a0a0a0] -mb-2 mt-5">
@@ -209,7 +213,7 @@ const ContactUs = () => {
 
 					<button
 						type="submit"
-						className="w-[150px] mt-10 h-10 bg-[#fff] font-alliance"
+						className="w-full sm:w-[150px] mt-10 h-10 bg-[#fff] font-alliance"
 					>
 						Submit
 					</button>

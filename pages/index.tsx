@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { useState } from "react";
 import Logo from "../components/Logo";
 import LogoWhite from "../components/LogoWhite";
 import NavBar from "../components/NavBar";
@@ -10,6 +11,8 @@ import WhatWereBuildingSection from "../components/WhatWereBuildingSection";
 import WhyWeDoSections from "../components/WhyWeDoSections";
 
 const Home: NextPage = () => {
+	const [contactUs, setContactUs] = useState(false);
+
 	return (
 		<div className="">
 			<Head>
@@ -33,7 +36,7 @@ const Home: NextPage = () => {
 			</Head>
 
 			<div className="w-full bg-[#ffffff] max-w-8xl">
-				<NavBar />
+				<NavBar contactUs={contactUs} setContactUs={setContactUs} />
 
 				{/* Hero Section */}
 				<div className="w-full flex items-center px-8 sm:px-20 py-40 mb-[100px]">
@@ -46,6 +49,7 @@ const Home: NextPage = () => {
 						</h1>
 
 						<button
+							onClick={() => setContactUs(true)}
 							className={`border w-[200px] items-center flex sm:hidden text-[#fff] ${"bg-steel hover:text-[#fff] border-steel"} px-14 py-2 hover:bg-steel mt-10  duration-200`}
 						>
 							Get started
