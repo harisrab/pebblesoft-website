@@ -84,7 +84,7 @@ const WhatWereBuildingSection = () => {
 						) => (
 							<div
 								key={index}
-								className="sm:w-[750px] border-y-[#a3a3a32b] sm:border-y-[#c0c0c02b] border-y-[1px] border-opacity-40 py-10 flex flex-col"
+								className="sm:w-[750px] border-y-[#a3a3a32b] last:border-b-0 sm:border-y-[#c0c0c02b] border-y-[1px] border-opacity-40 py-10 flex flex-col"
 							>
 								<Link href={link}>
 									<a target={"_blank"}>
@@ -141,6 +141,7 @@ const WhatWereBuildingSection = () => {
 									<p className="w-full">{descOne}</p>
 									<p className="w-full">{descTwo}</p>
 								</div>
+                <div className="w-full h-20 sm:hidden"></div>
 							</div>
 						)
 					)}
