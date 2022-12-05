@@ -151,7 +151,7 @@ const WhatWereBuildingSection = () => {
 									<p className="w-full">{descOne}</p>
 									<p className="w-full">{descTwo}</p>
 								</div>
-								<div className="w-full h-20 sm:hidden"></div>
+								<div className="w-full h-20"></div>
 							</div>
 						)
 					)}
