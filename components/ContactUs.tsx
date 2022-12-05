@@ -125,18 +125,20 @@ const ContactUs = () => {
 
 					<div className="max-w-[650px] flex flex-col gap-3">
 						<div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
-							<TextField
-								fullWidth
-								sx={customTextFieldStyles}
-								id="standard-basic"
-								label="First Name"
-								variant="standard"
-								value={firstName}
-								onChange={(e) =>
-									setFirstName(e.currentTarget.value)
-								}
-							/>
-							<div className="hidden sm:flex">
+							<div className="sm:flex-1 sm:flex">
+								<TextField
+									fullWidth
+									sx={customTextFieldStyles}
+									id="standard-basic"
+									label="First Name"
+									variant="standard"
+									value={firstName}
+									onChange={(e) =>
+										setFirstName(e.currentTarget.value)
+									}
+								/>
+							</div>
+							<div className="hidden sm:flex-1 sm:flex">
 								<TextField
 									fullWidth
 									sx={customTextFieldStyles}
@@ -151,42 +153,48 @@ const ContactUs = () => {
 							</div>
 						</div>
 						<div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
-							<TextField
-								fullWidth
-								sx={customTextFieldStyles}
-								id="standard-basic"
-								label="Business email"
-								variant="standard"
-								value={businessEmail}
-								onChange={(e) =>
-									setBusinessEmail(e.currentTarget.value)
-								}
-							/>
-							<TextField
-								fullWidth
-								sx={customTextFieldStyles}
-								id="standard-basic"
-								label="Phone number"
-								variant="standard"
-								value={phoneNumber}
-								onChange={(e) =>
-									setPhoneNumber(e.currentTarget.value)
-								}
-							/>
+							<div className="sm:flex-1 sm:flex">
+								<TextField
+									fullWidth
+									sx={customTextFieldStyles}
+									id="standard-basic"
+									label="Business email"
+									variant="standard"
+									value={businessEmail}
+									onChange={(e) =>
+										setBusinessEmail(e.currentTarget.value)
+									}
+								/>
+							</div>
+							<div className="sm:flex-1 sm:flex">
+								<TextField
+									fullWidth
+									sx={customTextFieldStyles}
+									id="standard-basic"
+									label="Phone number"
+									variant="standard"
+									value={phoneNumber}
+									onChange={(e) =>
+										setPhoneNumber(e.currentTarget.value)
+									}
+								/>
+							</div>
 						</div>
 						<div className="flex flex-col sm:flex-row gap-5 sm:gap-10">
-							<TextField
-								fullWidth
-								sx={customTextFieldStyles}
-								id="standard-basic"
-								label="Company or institution"
-								variant="standard"
-								value={company}
-								onChange={(e) =>
-									setCompany(e.currentTarget.value)
-								}
-							/>
-							<div className="hidden sm:flex">
+							<div className="sm:flex-1 sm:flex">
+								<TextField
+									fullWidth
+									sx={customTextFieldStyles}
+									id="standard-basic"
+									label="Company or institution"
+									variant="standard"
+									value={company}
+									onChange={(e) =>
+										setCompany(e.currentTarget.value)
+									}
+								/>
+							</div>{" "}
+							<div className="hidden sm:flex-1 sm:flex">
 								<TextField
 									fullWidth
 									sx={customTextFieldStyles}
@@ -207,7 +215,7 @@ const ContactUs = () => {
 						<textarea
 							value={message}
 							onChange={(e) => setMessage(e.currentTarget.value)}
-							className="border-[#909090] border-2 bg-steel max-h-[100px] min-h-[100px] focus:border-2 focus:border-[#fff] focus:outline-none duration-150 text-[#fff] p-2 focus:text-[#fff]"
+							className="border-[#909090] rounded-none border-2 bg-steel max-h-[100px] min-h-[100px] focus:border-2 focus:border-[#fff] focus:outline-none duration-150 text-[#fff] p-2 focus:text-[#fff]"
 						></textarea>
 					</div>
 
