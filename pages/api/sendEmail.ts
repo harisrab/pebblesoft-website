@@ -35,7 +35,7 @@ export default async function handler(
 	const msg = {
 		to: "harisrab01@gmail.com", // Change to your recipient
 		from: "support@rentya.co", // Change to your verified sender
-		subject: firstName + " " + lastName + " Send a Request on Pebblesoft",
+		subject: firstName + " " + lastName + " Sent a Request on Pebblesoft",
 		text: "Nothing",
 		html: htmlBody,
 	};
