@@ -6,6 +6,13 @@ const WhatWereBuildingSection = () => {
 
   const projects = [
     {
+      title: "Rentya",
+      images: ["/rentya/main.png", "/rentya/pay-until-you-own-it.png", "/rentya/rent-it-like-you-own-it.png", "/rentya/zero-deposits.png", "/rentya/rentya-protect.png"],
+      blurb: "Everything for everyone. Changing how ownership works.",
+      descOne: "We enable people to flexibly rent any product at fractional price of original cost. This is a platform for people to subscribe and rent products that they otherwise can’t afford to buy. Purchase of expensive products leaves people throwing them away and selling for low price. There exists no mechanism to rent and return.",
+      descTwo:"There are major problems of trust building, damage protections, and recycling when products are circulated on such platforms, and Rentya is being designed, built, and deployed to solve these major challenges.",
+    },
+    {
       title: "Future School Operating System",
       images: [
         "/futureSchoolOS/fsOS.png",
@@ -14,13 +21,7 @@ const WhatWereBuildingSection = () => {
       descOne: "We believe the major bottleneck to people’s prosperity is their in-ability to communicate in English language and mastery over basic scientific knowledge, which is handicap that bars to them all books, internet resources, universities, and all knowledge of our modern world.",
       descTwo: "Bringing in teachers to modularized schools in these villages without moving them from their comfort will create a much needed international exposure."
     },
-    {
-      title: "Rentya",
-      images: ["/rentya/main.png", "/rentya/pay-until-you-own-it.png", "/rentya/rent-it-like-you-own-it.png", "/rentya/zero-deposits.png", "/rentya/rentya-protect.png"],
-      blurb: "Everything for everyone. Changing how ownership works.",
-      descOne: "We enable people to flexibly rent any product at fractional price of original cost. This is a platform for people to subscribe and rent products that they otherwise can’t afford to buy. Purchase of expensive products leaves people throwing them away and selling for low price. There exists no mechanism to rent and return.",
-      descTwo:"There are major problems of trust building, damage protections, and recycling when products are circulated on such platforms, and Rentya is being designed, built, and deployed to solve these major challenges.",
-    },
+   
     {
       title: "Dragon Prep – Online College Testing Platform",
       images: ["/dp/dragonprep.png"],
