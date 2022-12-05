@@ -34,25 +34,26 @@ const WhatWereBuildingSection = () => {
 			descTwo:
 				"There are major problems of trust building, damage protections, and recycling when products are circulated on such platforms, and Rentya is being designed, built, and deployed to solve these major challenges.",
 		},
-		{
-			title: "Future School Operating System",
-			images: ["/futureSchoolOS/fsOS.png"],
-			blurb: "Remote classrooms with online teachers.\nVillagers too can have world class teaching experiences.",
-			descOne:
-				"We believe the major bottleneck to people’s prosperity is their in-ability to communicate in English language and mastery over basic scientific knowledge, which is handicap that bars to them all books, internet resources, universities, and all knowledge of our modern world.",
-			descTwo:
-				"Bringing in teachers to modularized schools in these villages without moving them from their comfort will create a much needed international exposure.",
-		},
 
 		{
 			title: "Dragon Prep – Online College Testing Platform",
-			images: ["/dp/dragonprep.png"],
+			images: ["/dp/main.png", "/dp/1.png", "/dp/2.png", "/dp/3.png"],
 			blurb: "SAT Test has moved online.\nWe give elite preparation to compete at highest level.",
 			descOne:
 				"Major standardized tests are moving online and there’s a need for a platform that gamifies the experience of private test trainings. Partnering up with Dragon Prep, we are developing web applications, mobile apps to support its pivot into this new arena of online test taking.",
 			descTwo:
 				"We work closely with our partners at Dragon Prep, where their deep understanding of test taking space, and our expertise in engineering frontend for applications and developing robust backend architectures combines to make that move into new market as effortless as possible.",
 		},
+
+		// {
+		// 	title: "Future School Operating System",
+		// 	images: ["/futureSchoolOS/fsOS.png"],
+		// 	blurb: "Remote classrooms with online teachers.\nVillagers too can have world class teaching experiences.",
+		// 	descOne:
+		// 		"We believe the major bottleneck to people’s prosperity is their in-ability to communicate in English language and mastery over basic scientific knowledge, which is handicap that bars to them all books, internet resources, universities, and all knowledge of our modern world.",
+		// 	descTwo:
+		// 		"Bringing in teachers to modularized schools in these villages without moving them from their comfort will create a much needed international exposure.",
+		// },
 	];
 	return (
 		<div className="relative w-full flex flex-col items-start px-8 sm:px-20 mt-20">
