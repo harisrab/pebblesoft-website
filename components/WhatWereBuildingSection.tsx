@@ -50,7 +50,7 @@ const WhatWereBuildingSection = () => {
 			title: "Des Lettres – Thoughts and Letters",
 			link: "https://pebblesoft.co/#",
 			images: ["/dl/main.png", "/dl/1.png"],
-			blurb: "Writing is timeless form of communication.\nA hot-bed for literary expressions, opinions, and agitated ideas.",
+			blurb: "Writing is timeless record.\nA hot-bed of literary expressions and agitated ideas.",
 			descOne:
 				"Des Lettres is a platform for people to share their thoughts and opinions on various topics, ideas, and issues. ",
 			descTwo:
