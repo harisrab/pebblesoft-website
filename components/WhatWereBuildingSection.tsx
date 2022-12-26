@@ -50,11 +50,11 @@ const WhatWereBuildingSection = () => {
 			title: "Des Lettres – Thoughts and Letters",
 			link: "https://pebblesoft.co/#",
 			images: ["/dl/main.png", "/dl/1.png"],
-			blurb: "Pandemic has made relationships difficult.\nWe refashion men, turning them into virtuosos of game.",
+			blurb: "Writing is timeless form of communication.\nA hot-bed for literary expressions, opinions, and agitated ideas.",
 			descOne:
-				"For over a decade, The Dating Arts has secured its highly acclaimed reputation as the premier dating and social strategy consulting agency for professionals looking to better their lifestyles, social skills, and relationships with a goal to live and date fearlessly.",
+				"Des Lettres is a platform for people to share their thoughts and opinions on various topics, ideas, and issues. ",
 			descTwo:
-				"The Dating Arts has helped thousands of clients who are having issues with dating and social dynamics discover the proper mindset and systems to overcome their insecurities so they can have amazing, long-lasting connections and moments with the kinds of relationships they desire.",
+				"Community blog and forum focused on discussion of issues of state, economy, biases, philosophy, technology, automation, among other topics. ",
 		},
 		{
 			title: "The Dating Arts – Become a Specialist of Game",
