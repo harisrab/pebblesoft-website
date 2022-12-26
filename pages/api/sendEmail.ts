@@ -49,7 +49,7 @@ export default async function handler(
 		.catch((error: any) => {
 			console.log("There's an error");
 			console.error(error);
-			console.log("Error Body ===> ", error.response.body);
+			// console.log("Error Body ===> ", error.response.body);
 			res.status(400).json({ msg: "error" });
 		});
 }
