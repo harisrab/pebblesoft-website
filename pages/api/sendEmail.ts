@@ -33,8 +33,8 @@ export default async function handler(
     `;
 
 	const msg = {
-		to: "harisrab01@gmail.com", // Change to your recipient
-		from: "support@rentya.co", // Change to your verified sender
+		to: "haris@pebblesoft.co", // Change to your recipient
+		from: "haris@pebblesoft.co", // Change to your verified sender
 		subject: firstName + " " + lastName + " Sent a Request on Pebblesoft",
 		text: "Nothing",
 		html: htmlBody,
