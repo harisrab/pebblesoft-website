@@ -12,6 +12,7 @@ export default async function handler(
 	res: NextApiResponse<Data>
 ) {
 	console.log(req.body);
+
 	const {
 		firstName,
 		lastName,
@@ -32,6 +33,8 @@ export default async function handler(
     <p><strong>Message:</strong> ${message}</p>
     `;
 
+	console.log("Body ===> ", htmlBody);
+
 	const msg = {
 		to: "haris@pebblesoft.co", // Change to your recipient
 		from: "haris@pebblesoft.co", // Change to your verified sender
@@ -39,6 +42,7 @@ export default async function handler(
 		text: "Nothing",
 		html: htmlBody,
 	};
+
 
 	await sgMail
 		.send(msg)
