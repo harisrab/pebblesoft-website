@@ -40,7 +40,7 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
         atTop
           ? "h-[150px] border-b-[1px] border-opacity-0 border-steel"
           : "h-[100px] backdrop-blur-md bg-opacity-60 border-b-[1px] border-steel border-opacity-10"
-      } duration-200 bg-red-100 flex items-center justify-between px-8 sm:px-20 z-[10000] bg-[#fff]`}
+      } duration-150 bg-red-100 flex items-center justify-between px-8 sm:px-20 z-[10000] bg-[#fff]`}
     >
       <AnimatePresence>
         {menuActive && (
