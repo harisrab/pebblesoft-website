@@ -13,7 +13,7 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
 
   useEffect(() => {
     window.addEventListener("scroll", function () {
-      if (window.scrollY == 0) {
+      if (window.scrollY < 10) {
         setAtTop(true);
       } else {
         setAtTop(false);
@@ -36,7 +36,7 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
   return (
     <div
       id="nav-bar"
-      className={`sticky top-0 w-full ${
+      className={`sticky -top-[1px] w-full ${
         atTop
           ? "h-[150px] border-b-[1px] border-opacity-0 border-steel"
           : "h-[100px] backdrop-blur-md bg-opacity-60 border-b-[1px] border-steel border-opacity-10"
