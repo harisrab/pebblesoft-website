@@ -20,6 +20,18 @@ const WhatWereBuildingSection = () => {
 
 	const projects = [
 		{
+			title: "Assignment Toolkit - Intelligent Assignment Solving Tool",
+			link: "https://www.rentya.co",
+			images: [
+				"/assignment_solver/PB_Poster_AssignmentSolver.png",
+			],
+			blurb: "The way education works is changing.\nSo must the tools that make real learning possible.",
+			descOne:
+			"The Assignment Solving Toolkit is a revolutionary new product that empowers students of all backgrounds to quickly and easily solve any assignment or homework problem. Simply input your assignment or questions in any form or format, and the toolkit will instantly provide you with accurate and reliable answers in PDF format, just as a teacher would. With the Assignment Solving Toolkit, you'll never have to struggle with a difficult assignment again!",
+			descTwo:
+			"The Assignment Solving Toolkit is more than just a tool for cheating on homework. It has the potential to fundamentally change the way we approach education. By allowing students to easily get answers to any assignment, it could lead to a world where exams are open book and the focus shifts from rote learning to actually understanding and internalizing concepts. This could help to differentiate between students who are truly engaged in their studies and those who are just going through the motions, leading to a more meaningful and rewarding educational experience for everyone.",
+		},
+		{
 			title: "Rentya",
 			link: "https://www.rentya.co",
 			images: [
@@ -31,9 +43,9 @@ const WhatWereBuildingSection = () => {
 			],
 			blurb: "Everything for everyone.\nChanging how ownership works.",
 			descOne:
-				"We enable people to flexibly rent any product at fractional price of original cost. This is a platform for people to subscribe and rent products that they otherwise can’t afford to buy. Purchase of expensive products leaves people throwing them away and selling for low price. There exists no mechanism to rent and return.",
+			"We enable people to flexibly rent any product at fractional price of original cost. This is a platform for people to subscribe and rent products that they otherwise can’t afford to buy. Purchase of expensive products leaves people throwing them away and selling for low price. There exists no mechanism to rent and return.",
 			descTwo:
-				"There are major problems of trust building, damage protections, and recycling when products are circulated on such platforms, and Rentya is being designed, built, and deployed to solve these major challenges.",
+			"There are major problems of trust building, damage protections, and recycling when products are circulated on such platforms, and Rentya is being designed, built, and deployed to solve these major challenges.",
 		},
 
 		{
