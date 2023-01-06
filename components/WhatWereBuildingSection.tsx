@@ -24,7 +24,7 @@ const WhatWereBuildingSection = () => {
       link: "https://www.rentya.co",
       images: ["/assignment_solver/PB_Poster_AssignmentSolver.png"],
       blurb:
-        "The way education works is changing.\nSo must the tools that make real learning possible.",
+        "The way education works is changing.\nA Swiss Army Knife for Assignments",
       descOne:
         "The Assignment Solving Toolkit is a game-changing product that helps students of all backgrounds solve any assignment quickly and easily. Simply input your assignment or questions in any form, and get accurate answers in PDF format. Say goodbye to struggling with difficult assignments with the Assignment Solving Toolkit.",
       descTwo:
