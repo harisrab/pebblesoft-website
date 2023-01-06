@@ -26,7 +26,7 @@ const WhatWereBuildingSection = () => {
       blurb:
         "The way education works is changing.\nSo must the tools that make real learning possible.",
       descOne:
-        "The Assignment Solving Toolkit is a revolutionary new product that empowers students of all backgrounds to quickly and easily solve any assignment or homework problem. Simply input your assignment or questions in any form or format, and the toolkit will instantly provide you with accurate and reliable answers in PDF format, just as a teacher would. With the Assignment Solving Toolkit, you'll never have to struggle with a difficult assignment again!",
+        "The Assignment Solving Toolkit is a game-changing product that helps students of all backgrounds solve any assignment quickly and easily. Simply input your assignment or questions in any form, and get accurate answers in PDF format. Say goodbye to struggling with difficult assignments with the Assignment Solving Toolkit.",
       descTwo:
         "The Assignment Solving Toolkit has the potential to transform education. It allows students to easily get answers to assignments, leading to open book exams and a focus on understanding concepts. It could enhance the educational experience by distinguishing engaged students from those just going through the motions.",
     },
