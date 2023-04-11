@@ -1,10 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { wrap } from "@popmotion/popcorn";
-import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import ImageSlider from "./ImageSlider";
-import Carousel from "framer-motion-carousel";
 import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 
@@ -20,15 +14,26 @@ const WhatWereBuildingSection = () => {
 
   const projects = [
     {
-      title: "Assignment Toolkit - Intelligent Assignment Solving Tool",
-      link: "https://www.rentya.co",
-      images: ["/assignment_solver/PB_Poster_AssignmentSolver.png"],
+      title: "Scholarly AI - Intelligent Tutoring Assistant",
+      link: "https://www.getscholarly.io",
+      images: ["/assignment_solver/scholarly.png"],
       blurb:
-        "The way education works is changing.\nA Swiss Army Knife for Assignments",
+        "The way education works is changing.\nA Swiss Army Knife for Learning.",
       descOne:
-        "The Assignment Solving Toolkit is a game-changing product that helps students of all backgrounds solve any assignment quickly and easily. Simply input your assignment or questions in any form, and get accurate answers in PDF format. Say goodbye to struggling with difficult assignments with the Assignment Solving Toolkit.",
+        "Based on GPT-4, Scholarly AI is a game-changing product that helps students of all backgrounds solve any assignment quickly and easily. Simply input your assignment or questions in any form, and get accurate answers in PDF format. Say goodbye to struggling with difficult assignments and say hello to Scholarly AI Tutoring Assistant.",
       descTwo:
-        "The Assignment Solving Toolkit has the potential to transform education. It allows students to easily get answers to assignments, leading to open book exams and a focus on understanding concepts. It could enhance the educational experience by distinguishing engaged students from those just going through the motions.",
+        "The Scholarly AI has the potential to transform education. It allows students to easily get answers to assignments, leading to open book exams and a focus on understanding concepts. It could enhance the educational experience by distinguishing engaged students from those just going through the motions.",
+    },
+    {
+      title: "Dragon Prep Words Memorization App",
+      link: "#",
+      images: ["/dp/dp_app.png"],
+      blurb:
+        "Memorize words with the power of spaced repitition.\nExpertly selected sets of words to ace SSATs.",
+      descOne:
+        "Dragon Prep Words Memorization is a user-friendly mobile app designed to help students study and learn with flashcards. It features a range of tools that make it easy for students to create and study their own flashcard decks, including the powerful SN2 spaced repetition algorithm. Students can compete on the leaderboard and earn rewards, while parents receive weekly notifications to track their child's progress.",
+      descTwo:
+        "Teachers also have access to an associated admin panel, where they can review students' performance and revision statistics. Teachers can also create and assign flashcard decks to their students, and track their progress. It also allows control over redeeming paid cards for internal classes.",
     },
     {
       title: "Rentya",
