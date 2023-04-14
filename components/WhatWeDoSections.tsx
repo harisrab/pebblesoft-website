@@ -8,12 +8,12 @@ type WhatWeDoSectionsProps = {
 };
 const WhatWeDoSections = ({ title, p1, p2, link }: WhatWeDoSectionsProps) => {
   return (
-    <div className="w-full flex flex-col sm:flex-row justify-between my-[150px] sm:my-24 relative">
+    <div className="w-full flex flex-col sm:flex-row justify-between my-[150px] sm:my-24 relative text-cwhite">
       <h1 className="font-alliance font-semibold text-[20px] sm:text-[22px] w-full sm:w-[390px]">
         {title}
       </h1>
 
-      <div className="flex flex-col gap-10 sm:gap-6 text-steel w-full sm:w-[500px] font-alliance">
+      <div className="flex flex-col gap-10 sm:gap-6 text-cwhite w-full sm:w-[500px] font-alliance">
         <p className="font-normal text-[20px] mt-5 sm:mt-0 sm:text-[28px]">
           {p1}
         </p>

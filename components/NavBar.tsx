@@ -38,9 +38,9 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
       id="nav-bar"
       className={`sticky -top-[1px] w-full ${
         atTop
-          ? "h-[150px] border-b-[1px] border-opacity-0 border-steel"
-          : "h-[100px] backdrop-blur-md bg-opacity-60 border-b-[1px] border-steel border-opacity-10"
-      } duration-150 bg-red-100 flex items-center justify-between px-8 sm:px-20 z-[10000] bg-[#fff]`}
+          ? "h-[150px] border-b-[1px] border-opacity-0 border-cwhite"
+          : "h-[100px] backdrop-blur-md bg-opacity-60 border-b-[1px] border-cwhite border-opacity-10"
+      } duration-150 bg-red-100 flex items-center justify-between px-8 sm:px-20 z-[10000] bg-steel`}
     >
       <AnimatePresence>
         {menuActive && (
@@ -72,7 +72,7 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
               ? "bg-transparent hover:bg-[#fff] text-[#fff] hover:text-steel border-[#fff]"
               : contactUs
               ? "bg-steel hover:text-steel border-[#fff] text-[#fff] hover:bg-[#fff]"
-              : "bg-[#fff] hover:text-[#fff] border-steel"
+              : "bg-steel text-[#fff] hover:text-steel border-white hover:border-cwhite hover:bg-cwhite"
           } px-14 py-2 hover:bg-steel  duration-200`}
         >
           Get started
@@ -84,7 +84,7 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
               ? "border border-[#fff] text-[#fff] hover:bg-[#fff] hover:text-steel h-[42px] w-[42px] flex items-center justify-center hover:bg-transparent duration-200"
               : contactUs
               ? "border border-[#fff] text-[#fff] hover:bg-[#fff] hover:text-steel h-[42px] w-[42px] flex items-center justify-center hover:bg-transparent duration-200"
-              : "border border-steel bg-[#fff] h-[42px] w-[42px] flex items-center justify-center hover:bg-steel hover:text-[#fff] duration-200"
+              : "border border-[#fff] bg-[transparent] h-[42px] w-[42px] flex items-center justify-center hover:bg-cwhite text-cwhite hover:text-steel duration-200"
           }
         >
           {menuActive ? (

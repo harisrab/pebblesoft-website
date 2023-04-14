@@ -97,7 +97,7 @@ const WhatWereBuildingSection = () => {
     // },
   ];
   return (
-    <div className="relative w-full flex flex-col items-start px-8 sm:px-20 mt-20">
+    <div className="relative w-full flex flex-col items-start px-8 sm:px-20 mt-20 text-cwhite">
       <div id="what-were-building" className="absolute top-[-200px]"></div>
 
       <div className="border-b-[1px] border-[#00000042] pb-20 w-full">
