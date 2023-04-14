@@ -35,11 +35,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="w-full bg-steel max-w-8xl relative">
-        <canvas className="absolute top-0 left-0 w-full h-full flex items-left justify-start">
-          <div className="relative w-full h-full">
-            <div className="w-[500px] h-[500px] bg-[#ff8844] z-[1000099] top-0 left-0"></div>
-          </div>
-        </canvas>
+     
         <NavBar contactUs={contactUs} setContactUs={setContactUs} />
 
         {/* Hero Section */}
