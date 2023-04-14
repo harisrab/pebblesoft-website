@@ -69,9 +69,9 @@ const Home: NextPage = () => {
                 />
               </div>
 
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center">
+              <div className="relative w-[300px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center">
                 <Image
-                  src="/marquee/scholarly_logo.png"
+                  src="/marquee/copilot_logo.png"
                   layout="fill"
                   objectFit="contain"
                 />
