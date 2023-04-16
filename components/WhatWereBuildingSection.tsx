@@ -74,17 +74,17 @@ const WhatWereBuildingSection = () => {
       descTwo:
         "Community blog and forum focused on discussion of issues of state, economy, biases, philosophy, technology, automation, among other topics. ",
     },
-    {
-      title: "The Dating Arts – Become a Specialist of Game",
-      link: "https://www.thedatingarts.com",
-      images: ["/tda/main.png"],
-      blurb:
-        "Pandemic has made relationships difficult.\nWe refashion men, turning them into virtuosos of game.",
-      descOne:
-        "For over a decade, The Dating Arts has secured its highly acclaimed reputation as the premier dating and social strategy consulting agency for professionals looking to better their lifestyles, social skills, and relationships with a goal to live and date fearlessly.",
-      descTwo:
-        "The Dating Arts has helped thousands of clients who are having issues with dating and social dynamics discover the proper mindset and systems to overcome their insecurities so they can have amazing, long-lasting connections and moments with the kinds of relationships they desire.",
-    },
+    // {
+    //   title: "The Dating Arts – Become a Specialist of Game",
+    //   link: "https://www.thedatingarts.com",
+    //   images: ["/tda/main.png"],
+    //   blurb:
+    //     "Pandemic has made relationships difficult.\nWe refashion men, turning them into virtuosos of game.",
+    //   descOne:
+    //     "For over a decade, The Dating Arts has secured its highly acclaimed reputation as the premier dating and social strategy consulting agency for professionals looking to better their lifestyles, social skills, and relationships with a goal to live and date fearlessly.",
+    //   descTwo:
+    //     "The Dating Arts has helped thousands of clients who are having issues with dating and social dynamics discover the proper mindset and systems to overcome their insecurities so they can have amazing, long-lasting connections and moments with the kinds of relationships they desire.",
+    // },
 
     // {
     // 	title: "Future School Operating System",
