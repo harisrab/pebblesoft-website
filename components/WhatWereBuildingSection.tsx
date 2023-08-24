@@ -14,6 +14,23 @@ const WhatWereBuildingSection = () => {
 
   const projects = [
     {
+      title: "Govern Corp - Autonomous Decision Making",
+      link: "https://www.governcorp.com",
+      images: [
+        "/governcorp/1.png",
+        "/governcorp/2.png",
+        "/governcorp/3.png",
+        "/governcorp/4.png",
+        "/governcorp/5.png"
+      ],
+      blurb:
+        "Governence as a service.\nAI platform for decision making.",
+      descOne:
+        "At Govern Corp, we're building a technology that will forever change the way we govern our society. Reforming piece by piece, bureaucratic human processes and workflows that take hours and days into systems that can accomplish those tasks in seconds.",
+      descTwo:
+        "We're employing the next generation of AI-native software powered by Language Models and other AI Models to extract analytics from large swaths of data, and enable important people doing important work to make decisions that impacts the flourishing of human society. ",
+    },
+    {
       title: "Scholarly AI - Intelligent Tutoring Assistant",
       link: "https://www.getscholarly.io",
       images: ["/assignment_solver/scholarly.png"],

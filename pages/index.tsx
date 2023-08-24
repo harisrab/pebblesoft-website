@@ -59,11 +59,20 @@ const Home: NextPage = () => {
 
         {/* Marquee */}
         <div className="mb-[150px]">
-          <Marquee gradient={false}>
-            <div className="flex items-center justify-between">
+          <Marquee speed={60} gradient={false}>
+            <div className="flex items-center justify-between ">
               <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200 flex items-center">
                 <Image
                   src="/marquee/dp_logo.png"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+
+
+              <div className="relative w-[200px] h-[25px] ml-5 opacity-60 hover:opacity-50 duration-200 flex items-center">
+                <Image
+                  src="/marquee/governcorp_white_logo.png"
                   layout="fill"
                   objectFit="contain"
                 />
@@ -102,7 +111,7 @@ const Home: NextPage = () => {
         <WhatWereBuildingSection />
 
         {/* Why we're here section */}
-        <div className="w-full flex flex-col items-start px-8 sm:px-20  font-alliance text-cwhite">
+        <div className="w-full flex flex-col items-start px-8 sm:px-20  font-alliance text-cwhite overflow-hidden">
           <div className="border-y-[1px] border-[#7777772c] py-20 pb-[180px] sm:pb-20 w-full">
             <div className="relative w-full flex flex-col sm:flex-row justify-between font-alliance">
               <div id="why-were-here" className="absolute top-[-200px]"></div>
