@@ -241,15 +241,25 @@ const PORJECTS = [
 ];
 
 const ProjectsCarousel = () => {
-	const [currentSlide, setCurrentSlide] = useState(1);
-	const [carousel, setCarousel] = useState(<></>);
+	const [windowAvailable, setWindowAvailable] = useState(false);
 	const [projects, setProjects] = useState(PORJECTS);
+	const [currentSlide, setCurrentSlide] = useState(1);
+	const [currentSlideImage, setCurrentSlideImage] = useState(0);
 
-	const runCarousel = () => {
-		setCurrentSlide((slide) => {
-			setProjects([...projects, projects[slide - 1]]);
-			return slide + 1;
-		});
+	const runCarousel = (index?: number) => {
+		setCurrentSlideImage(0);
+
+		if (index) {
+			setCurrentSlide((slide) => {
+				if (index > slide) setProjects([...projects, ...PORJECTS]);
+				return index;
+			});
+		} else {
+			setCurrentSlide((slide) => {
+				setProjects([...projects, projects[slide - 1]]);
+				return slide + 1;
+			});
+		}
 	};
 
 	useEffect(() => {
@@ -257,54 +267,64 @@ const ProjectsCarousel = () => {
 			return;
 		}
 
-		setCarousel(
-			<motion.div
-				className={`w-fit h-[218px] sm:h-[294px] xl:h-[604px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px]`}
-				style={{
-					transform: `translateX(-${
-						window.innerWidth < 640
-							? 284 * currentSlide + 10 * currentSlide - 32
-							: window.innerWidth < 1280
-							? 370 * currentSlide + 10 * currentSlide - 85
-							: 581 * currentSlide + 10 * currentSlide - 85
-					}px`,
-				}}
-			>
-				{projects.map(({ title, images }, index) => (
-					<motion.div
-						key={index}
-						layout
-						className={`relative ${
-							index === currentSlide
-								? 'w-[357px] sm:w-[500px] xl:w-[990px] h-[218px] sm:h-[294px] xl:h-[604px]'
-								: 'w-[284px] sm:w-[370px] xl:w-[581px] h-[174px] sm:h-[217px] xl:h-[354px]'
-						}`}
-					>
-						<div className='absolute inset-0 overflow-hidden'>
-							<Image
-								src={images[0]}
-								alt={`${title} - Project Image`}
-								layout='fill'
-								objectFit='cover'
-								loading='eager'
-							/>
-						</div>
-					</motion.div>
-				))}
-			</motion.div>
-		);
-
 		const timer = setTimeout(() => {
 			runCarousel();
 		}, 7000);
 
 		return () => clearTimeout(timer);
-	}, [currentSlide]);
+	}, [currentSlide, currentSlideImage]);
+
+	useEffect(() => {
+		setWindowAvailable(true);
+	}, []);
 
 	return (
 		<div className='relative w-full flex flex-col items-start mt-20 text-cwhite'>
 			<div className='w-full border-b-[1px] border-[#00000042] pb-20 overflow-hidden'>
-				{carousel}
+				{windowAvailable && (
+					<motion.div
+						className={`w-fit h-[218px] sm:h-[294px] xl:h-[604px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px]`}
+						style={{
+							transform: `translateX(-${
+								window.innerWidth < 640
+									? 284 * currentSlide + 10 * currentSlide - 32
+									: window.innerWidth < 1280
+									? 370 * currentSlide + 10 * currentSlide - 85
+									: 581 * currentSlide + 10 * currentSlide - 85
+							}px`,
+						}}
+					>
+						{projects.map(({ title, images }, index) => (
+							<motion.div
+								key={index}
+								layout
+								className={`${
+									index === currentSlide
+										? 'w-[357px] sm:w-[500px] xl:w-[990px] h-[218px] sm:h-[294px] xl:h-[604px]'
+										: 'w-[284px] sm:w-[370px] xl:w-[581px] h-[174px] sm:h-[217px] xl:h-[354px]'
+								}`}
+							>
+								<button
+									disabled={index === currentSlide || index === 0}
+									onClick={() => runCarousel(index)}
+									className='w-full h-full relative'
+								>
+									<Image
+										src={
+											index === currentSlide
+												? images[currentSlideImage]
+												: images[0]
+										}
+										alt={`${title} - Project Image`}
+										layout='fill'
+										objectFit='cover'
+										loading='eager'
+									/>
+								</button>
+							</motion.div>
+						))}
+					</motion.div>
+				)}
 				<div className='w-full px-8 sm:px-20 font-alliance flex items-start flex-col'>
 					<AnimatePresence mode='wait'>
 						<motion.div
@@ -315,6 +335,34 @@ const ProjectsCarousel = () => {
 							transition={{ duration: 0.25, ease: 'easeInOut' }}
 							className='w-full'
 						>
+							{windowAvailable && (
+								<ul className='w-full xl:w-[990px] h-[100px] xl:h-[120px] mt-[10px] px-[5px] hidden sm:flex place-content-start place-items-start gap-[10px]'>
+									{projects[currentSlide].images
+										.slice(0, window.innerWidth < 1280 ? 2 : 4)
+										.map((src, index) => (
+											<li key={index} className='h-full'>
+												<button
+													disabled={index === currentSlideImage}
+													onClick={() => setCurrentSlideImage(index)}
+													className='w-[170px] xl:w-[204px] h-full relative'
+													style={{
+														opacity: index === currentSlideImage ? 1 : 0.5,
+													}}
+												>
+													<Image
+														src={src}
+														alt={`${
+															projects[currentSlide].title
+														} - Project Image ${index + 1}`}
+														layout='fill'
+														objectFit='cover'
+														loading='eager'
+													/>
+												</button>
+											</li>
+										))}
+								</ul>
+							)}
 							<div className='w-full xl:w-[990px]'>
 								<div className='mt-[53px] sm:mt-[68px] mb-[27px] sm:mb-[17px] flex flex-col xl:flex-row place-content-between place-items-start xl:place-items-center gap-3 xl:gap-20'>
 									<p className='font-semibold text-[30px] sm:text-[36px]'>
@@ -323,7 +371,7 @@ const ProjectsCarousel = () => {
 									<Link href={projects[currentSlide].link}>
 										<a
 											target={'_blank'}
-											className='max-w-[40%] text-[20px] sm:text-[22px] text-[#9f9f9f] hover:text-[#ffffff] inline-block break-words transition-colors duration-200'
+											className='xl:max-w-[40%] text-[20px] sm:text-[22px] text-[#9f9f9f] hover:text-[#ffffff] inline-block break-words transition-colors duration-200'
 										>
 											{projects[currentSlide].link}
 										</a>
