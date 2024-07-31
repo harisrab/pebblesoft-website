@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar";
 import Originating from "../components/Originating";
 import WhatWereBuildingSection from "../components/WhatWereBuildingSection";
 import WhyWeDoSections from "../components/WhyWeDoSections";
+import ProjectsCarousel from "../components/ProjectsCarousel";
 
 const Home: NextPage = () => {
   const [contactUs, setContactUs] = useState(false);
@@ -106,6 +107,9 @@ const Home: NextPage = () => {
             </div>
           </Marquee>
         </div>
+
+        {/* Projects carousel */}
+        <ProjectsCarousel />
 
         {/* What we're building? */}
         <WhatWereBuildingSection />
