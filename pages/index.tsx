@@ -163,7 +163,7 @@ const Home: NextPage = () => {
               Founded in 2022 © All rights reserved.
             </p>
           </div>
-          <Originating />
+          {/* <Originating /> */}
         </div>
       </div>
     </div>

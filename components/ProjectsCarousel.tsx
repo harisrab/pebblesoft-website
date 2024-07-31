@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion, PanInfo } from 'framer-motion';
 
 const PORJECTS = [
 	{
@@ -241,10 +241,12 @@ const PORJECTS = [
 ];
 
 const ProjectsCarousel = () => {
+	const carouselRef = useRef<HTMLDivElement>(null);
 	const [windowAvailable, setWindowAvailable] = useState(false);
 	const [projects, setProjects] = useState(PORJECTS);
 	const [currentSlide, setCurrentSlide] = useState(1);
 	const [currentSlideImage, setCurrentSlideImage] = useState(0);
+	const [carouselPosition, setCarouselPosition] = useState(0);
 
 	const runCarousel = (index?: number) => {
 		setCurrentSlideImage(0);
@@ -252,14 +254,54 @@ const ProjectsCarousel = () => {
 		if (index) {
 			setCurrentSlide((slide) => {
 				if (index > slide) setProjects([...projects, ...PORJECTS]);
-				return index;
+				const newSlide = index;
+				snapToSlide(newSlide);
+				return newSlide;
 			});
 		} else {
 			setCurrentSlide((slide) => {
 				setProjects([...projects, projects[slide - 1]]);
-				return slide + 1;
+				const newSlide = slide + 1;
+				snapToSlide(newSlide);
+				return newSlide;
 			});
 		}
+	};
+
+	const snapToSlide = (slideIndex: number) => {
+		const newPosition =
+			(window.innerWidth < 640
+				? 284 * slideIndex + 10 * slideIndex - 32
+				: window.innerWidth < 1280
+				? 370 * slideIndex + 10 * slideIndex - 85
+				: 581 * slideIndex + 10 * slideIndex - 85) * -1;
+
+		setCarouselPosition(newPosition);
+	};
+
+	const handleDragEnd = (
+		_event: MouseEvent | TouchEvent | PointerEvent,
+		info: PanInfo
+	) => {
+		const slideWidth =
+			window.innerWidth < 640
+				? 284 + 10
+				: window.innerWidth < 1280
+				? 370 + 10
+				: 581 + 10;
+
+		const draggedDistance = info.offset.x;
+
+		const slidesMoved = Math.round(draggedDistance / slideWidth);
+
+		let newSlide = Math.max(
+			1,
+			Math.min(projects.length, currentSlide - slidesMoved)
+		);
+
+		setCurrentSlide(newSlide);
+		snapToSlide(newSlide);
+		setProjects([...projects, ...PORJECTS]);
 	};
 
 	useEffect(() => {
@@ -276,6 +318,7 @@ const ProjectsCarousel = () => {
 
 	useEffect(() => {
 		setWindowAvailable(true);
+		snapToSlide(currentSlide);
 	}, []);
 
 	return (
@@ -283,16 +326,19 @@ const ProjectsCarousel = () => {
 			<div className='w-full border-b-[1px] border-[#00000042] pb-20 overflow-hidden'>
 				{windowAvailable && (
 					<motion.div
-						className={`w-fit h-[218px] sm:h-[294px] xl:h-[604px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px]`}
-						style={{
-							transform: `translateX(-${
-								window.innerWidth < 640
-									? 284 * currentSlide + 10 * currentSlide - 32
+						ref={carouselRef}
+						drag='x'
+						dragConstraints={{
+							right:
+								(window.innerWidth < 640
+									? 284 + 10 - 32
 									: window.innerWidth < 1280
-									? 370 * currentSlide + 10 * currentSlide - 85
-									: 581 * currentSlide + 10 * currentSlide - 85
-							}px`,
+									? 370 + 10 - 85
+									: 581 + 10 - 85) * -1,
 						}}
+						onDragEnd={handleDragEnd}
+						animate={{ x: carouselPosition }}
+						className={`w-fit h-[218px] sm:h-[294px] xl:h-[604px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none`}
 					>
 						{projects.map(({ title, images }, index) => (
 							<motion.div
