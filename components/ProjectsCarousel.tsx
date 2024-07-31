@@ -274,7 +274,7 @@ const ProjectsCarousel = () => {
 				? 284 * slideIndex + 10 * slideIndex - 32
 				: window.innerWidth < 1280
 				? 370 * slideIndex + 10 * slideIndex - 85
-				: 581 * slideIndex + 10 * slideIndex - 85) * -1;
+				: 420 * slideIndex + 10 * slideIndex - 85) * -1;
 
 		setCarouselPosition(newPosition);
 	};
@@ -288,7 +288,7 @@ const ProjectsCarousel = () => {
 				? 284 + 10
 				: window.innerWidth < 1280
 				? 370 + 10
-				: 581 + 10;
+				: 420 + 10;
 
 		const draggedDistance = info.offset.x;
 
@@ -334,11 +334,11 @@ const ProjectsCarousel = () => {
 									? 284 + 10 - 32
 									: window.innerWidth < 1280
 									? 370 + 10 - 85
-									: 581 + 10 - 85) * -1,
+									: 420 + 10 - 85) * -1,
 						}}
 						onDragEnd={handleDragEnd}
 						animate={{ x: carouselPosition }}
-						className={`w-fit h-[218px] sm:h-[294px] xl:h-[604px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none`}
+						className={`w-fit h-[218px] sm:h-[294px] xl:h-[323px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none`}
 					>
 						{projects.map(({ title, images }, index) => (
 							<motion.div
@@ -346,8 +346,8 @@ const ProjectsCarousel = () => {
 								layout
 								className={`${
 									index === currentSlide
-										? 'w-[357px] sm:w-[500px] xl:w-[990px] h-[218px] sm:h-[294px] xl:h-[604px]'
-										: 'w-[284px] sm:w-[370px] xl:w-[581px] h-[174px] sm:h-[217px] xl:h-[354px]'
+										? 'w-[357px] sm:w-[500px] xl:w-[550px] h-[218px] sm:h-[294px] xl:h-[323px]'
+										: 'w-[284px] sm:w-[370px] xl:w-[420px] h-[174px] sm:h-[217px] xl:h-[247px]'
 								}`}
 							>
 								<button
@@ -382,7 +382,7 @@ const ProjectsCarousel = () => {
 							className='w-full'
 						>
 							{windowAvailable && (
-								<ul className='w-full xl:w-[990px] h-[100px] xl:h-[120px] mt-[10px] px-[5px] hidden sm:flex place-content-start place-items-start gap-[10px]'>
+								<ul className='w-full xl:w-[550px] h-[100px] xl:h-[70px] mt-[10px] px-[5px] hidden sm:flex place-content-start place-items-start gap-[10px]'>
 									{projects[currentSlide].images
 										.slice(0, window.innerWidth < 1280 ? 2 : 4)
 										.map((src, index) => (
@@ -390,7 +390,7 @@ const ProjectsCarousel = () => {
 												<button
 													disabled={index === currentSlideImage}
 													onClick={() => setCurrentSlideImage(index)}
-													className='w-[170px] xl:w-[204px] h-full relative'
+													className='w-[170px] xl:w-[120px] h-full relative'
 													style={{
 														opacity: index === currentSlideImage ? 1 : 0.5,
 													}}
@@ -409,21 +409,21 @@ const ProjectsCarousel = () => {
 										))}
 								</ul>
 							)}
-							<div className='w-full xl:w-[990px]'>
+							<div className='w-full xl:w-[550px]'>
 								<div className='mt-[53px] sm:mt-[68px] mb-[27px] sm:mb-[17px] flex flex-col xl:flex-row place-content-between place-items-start xl:place-items-center gap-3 xl:gap-20'>
-									<p className='font-semibold text-[30px] sm:text-[36px]'>
+									<p className='font-semibold text-[30px] sm:text-[26px]'>
 										{projects[currentSlide].title}
 									</p>
 									<Link href={projects[currentSlide].link}>
 										<a
 											target={'_blank'}
-											className='xl:max-w-[40%] text-[20px] sm:text-[22px] text-[#9f9f9f] hover:text-[#ffffff] inline-block break-words transition-colors duration-200'
+											className='xl:max-w-[30%] text-[20px] sm:text-[14px] text-[#9f9f9f] hover:text-[#ffffff] inline-block break-words transition-colors duration-200'
 										>
 											{projects[currentSlide].link}
 										</a>
 									</Link>
 								</div>
-								<p className='font-semibold text-[20px] sm:text-[26px] text-[#9f9f9f]'>
+								<p className='font-semibold text-[20px] sm:text-[20px] text-[#9f9f9f]'>
 									{projects[currentSlide].blurb}
 								</p>
 								<div className='mt-[59px] sm:mt-[31px] mb-[59px] sm:mb-[107px] flex flex-wrap place-content-start place-items-start gap-[12px] sm:gap-[22px]'>
@@ -431,7 +431,7 @@ const ProjectsCarousel = () => {
 										(technology, index) => (
 											<span
 												key={index}
-												className='px-[22px] font-semibold text-[16px] sm:text-[20px] leading-[40px] sm:leading-[48px] bg-[#002139]'
+												className='px-[22px] font-semibold text-[16px] sm:text-[16px] leading-[40px] sm:leading-[48px] bg-[#002139]'
 											>
 												{technology}
 											</span>
@@ -440,10 +440,10 @@ const ProjectsCarousel = () => {
 								</div>
 							</div>
 							<div className='w-[86vw] flex flex-col sm:flex-row place-content-between place-items-stretch gap-[73px] sm:gap-[143px]'>
-								<p className='font-normal text-[20px] leading-[51px]'>
+								<p className='font-normal text-[14px]'>
 									{projects[currentSlide].descOne}
 								</p>
-								<p className='font-normal text-[20px] leading-[51px]'>
+								<p className='font-normal text-[14px]'>
 									{projects[currentSlide].descTwo}
 								</p>
 							</div>
