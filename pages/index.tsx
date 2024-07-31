@@ -64,7 +64,7 @@ const Home: NextPage = () => {
             <div className="flex items-center justify-between ">
               <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200 flex items-center">
                 <Image
-                  src="/marquee/dp_logo.png"
+                  src="/marquee/dragon_prep.png"
                   layout="fill"
                   objectFit="contain"
                 />
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
 
               <div className="relative w-[200px] h-[25px] ml-5 opacity-60 hover:opacity-50 duration-200 flex items-center">
                 <Image
-                  src="/marquee/governcorp_white_logo.png"
+                  src="/marquee/elite_education.png"
                   layout="fill"
                   objectFit="contain"
                 />
@@ -81,7 +81,7 @@ const Home: NextPage = () => {
 
               <div className="relative w-[300px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center">
                 <Image
-                  src="/marquee/copilot_logo.png"
+                  src="/marquee/fanai.png"
                   layout="fill"
                   objectFit="contain"
                 />
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
               <div className="relative w-[200px] h-[40px] opacity-30 hover:opacity-50 duration-200  flex items-center">
                 <Image
                   quality={100}
-                  src="/marquee/hku_logo.png"
+                  src="/marquee/govern_health.png"
                   layout="fill"
                   objectFit="contain"
                 />
@@ -99,7 +99,61 @@ const Home: NextPage = () => {
               <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
                 <Image
                   quality={100}
-                  src="/marquee/rentya_logo.png"
+                  src="/marquee/group-ib.png"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+
+              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
+                <Image
+                  quality={100}
+                  src="/marquee/hku_med.png"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+
+              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
+                <Image
+                  quality={100}
+                  src="/marquee/leverify.png"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+
+              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
+                <Image
+                  quality={100}
+                  src="/marquee/rentya.png"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+
+              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
+                <Image
+                  quality={100}
+                  src="/marquee/rino.png"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+
+              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
+                <Image
+                  quality={100}
+                  src="/marquee/scholarly_ai_copilot.png"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+
+              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
+                <Image
+                  quality={100}
+                  src="/marquee/university_of_hong_kong.png"
                   layout="fill"
                   objectFit="contain"
                 />
