@@ -78,7 +78,7 @@ const LogoLine = () => {
 							exit={{ y: '-100%', opacity: 0 }}
 							transition={{
 								duration: 0.3,
-								ease: 'backOut',
+								ease: 'easeOut',
 								delay: index * 0.1,
 							}}
 							className='w-full h-full relative'
