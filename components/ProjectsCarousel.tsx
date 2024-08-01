@@ -242,11 +242,14 @@ const PORJECTS = [
 
 const ProjectsCarousel = () => {
 	const carouselRef = useRef<HTMLDivElement>(null);
+	const dragStartPosition = useRef(0);
 	const [windowAvailable, setWindowAvailable] = useState(false);
 	const [projects, setProjects] = useState(PORJECTS);
 	const [currentSlide, setCurrentSlide] = useState(1);
 	const [currentSlideImage, setCurrentSlideImage] = useState(0);
 	const [carouselPosition, setCarouselPosition] = useState(0);
+
+	const dragThreshold = 5;
 
 	const runCarousel = (index?: number) => {
 		setCurrentSlideImage(0);
@@ -279,8 +282,15 @@ const ProjectsCarousel = () => {
 		setCarouselPosition(newPosition);
 	};
 
-	const handleDragEnd = (
+	const handleDragStart = (
 		_event: MouseEvent | TouchEvent | PointerEvent,
+		info: PanInfo
+	) => {
+		dragStartPosition.current = info.point.x;
+	};
+
+	const handleDragEnd = (
+		event: Event | MouseEvent | TouchEvent | PointerEvent,
 		info: PanInfo
 	) => {
 		const slideWidth =
@@ -290,7 +300,17 @@ const ProjectsCarousel = () => {
 				? 370 + 10
 				: 420 + 10;
 
-		const draggedDistance = info.offset.x;
+		const draggedDistance = info.point.x - dragStartPosition.current;
+
+		if (Math.abs(draggedDistance) < dragThreshold) {
+			const slideIndex = Number(
+				(event.currentTarget as HTMLButtonElement).dataset.index
+			);
+			if (slideIndex && slideIndex !== currentSlide) {
+				runCarousel(slideIndex);
+				return;
+			}
+		}
 
 		const slidesMoved = Math.round(draggedDistance / slideWidth);
 
@@ -302,6 +322,37 @@ const ProjectsCarousel = () => {
 		setCurrentSlide(newSlide);
 		snapToSlide(newSlide);
 		setProjects([...projects, ...PORJECTS]);
+	};
+
+	const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
+		dragStartPosition.current = event.clientX;
+	};
+
+	const handleMouseUp = (event: React.MouseEvent<HTMLDivElement>) => {
+		const draggedDistance = event.clientX - dragStartPosition.current;
+
+		if (Math.abs(draggedDistance) < dragThreshold) {
+			const slideIndex = Number(event.currentTarget.dataset.index);
+			if (slideIndex && slideIndex !== currentSlide) {
+				runCarousel(slideIndex);
+			}
+		}
+	};
+
+	const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+		dragStartPosition.current = event.touches[0].clientX;
+	};
+
+	const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+		const draggedDistance =
+			event.changedTouches[0].clientX - dragStartPosition.current;
+
+		if (Math.abs(draggedDistance) < dragThreshold) {
+			const slideIndex = Number(event.currentTarget.dataset.index);
+			if (slideIndex && slideIndex !== currentSlide) {
+				runCarousel(slideIndex);
+			}
+		}
 	};
 
 	useEffect(() => {
@@ -336,24 +387,30 @@ const ProjectsCarousel = () => {
 									? 370 + 10 - 85
 									: 420 + 10 - 85) * -1,
 						}}
+						onDragStart={handleDragStart}
 						onDragEnd={handleDragEnd}
 						animate={{ x: carouselPosition }}
-						className={`w-fit h-[218px] sm:h-[294px] xl:h-[323px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none`}
+						className={`w-fit h-[218px] sm:h-[294px] xl:h-[323px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none cursor-grab active:cursor-grabbing`}
 					>
 						{projects.map(({ title, images }, index) => (
 							<motion.div
 								key={index}
 								layout
+								data-index={index}
 								className={`${
 									index === currentSlide
 										? 'w-[357px] sm:w-[500px] xl:w-[550px] h-[218px] sm:h-[294px] xl:h-[323px]'
 										: 'w-[284px] sm:w-[370px] xl:w-[420px] h-[174px] sm:h-[217px] xl:h-[247px]'
 								}`}
+								onMouseDown={handleMouseDown}
+								onMouseUp={handleMouseUp}
+								onTouchStart={handleTouchStart}
+								onTouchEnd={handleTouchEnd}
 							>
 								<button
+									data-index={index}
 									disabled={index === currentSlide || index === 0}
-									onClick={() => runCarousel(index)}
-									className='w-full h-full relative'
+									className='w-full h-full relative pointer-events-none'
 								>
 									<Image
 										src={
