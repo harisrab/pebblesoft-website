@@ -290,7 +290,7 @@ const ProjectsCarousel = () => {
 	};
 
 	const handleDragEnd = (
-		event: Event | MouseEvent | TouchEvent | PointerEvent,
+		_event: Event | MouseEvent | TouchEvent | PointerEvent,
 		info: PanInfo
 	) => {
 		const slideWidth =
@@ -302,15 +302,7 @@ const ProjectsCarousel = () => {
 
 		const draggedDistance = info.point.x - dragStartPosition.current;
 
-		if (Math.abs(draggedDistance) < dragThreshold) {
-			const slideIndex = Number(
-				(event.currentTarget as HTMLButtonElement).dataset.index
-			);
-			if (slideIndex && slideIndex !== currentSlide) {
-				runCarousel(slideIndex);
-				return;
-			}
-		}
+		const velocity = info.velocity.x;
 
 		const slidesMoved = Math.round(draggedDistance / slideWidth);
 
@@ -318,6 +310,13 @@ const ProjectsCarousel = () => {
 			1,
 			Math.min(projects.length, currentSlide - slidesMoved)
 		);
+
+		if (Math.abs(velocity) > 0.5) {
+			newSlide =
+				velocity > 0
+					? Math.max(1, newSlide - 1)
+					: Math.min(projects.length, newSlide + 1);
+		}
 
 		setCurrentSlide(newSlide);
 		snapToSlide(newSlide);
@@ -409,7 +408,6 @@ const ProjectsCarousel = () => {
 							>
 								<button
 									data-index={index}
-									disabled={index === currentSlide || index === 0}
 									className='w-full h-full relative pointer-events-none'
 								>
 									<Image
