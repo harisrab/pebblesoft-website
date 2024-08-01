@@ -240,6 +240,24 @@ const PORJECTS = [
 	},
 ];
 
+// const SIZES = {
+// 	selectedSlide: {
+// 		xl: [800, 471],
+// 		sm: [640, 376],
+// 		xs: [357, 218],
+// 	},
+// 	slide: {
+// 		xl: [300, 176],
+// 		sm: [260, 153],
+// 		xs: [284, 174],
+// 	},
+// };
+
+// const SIZES_SELECTED_STRING_WIDTH = `w-[${SIZES.selectedSlide.xs[0]}px] md:w-[${SIZES.selectedSlide.sm[0]}px] xl:w-[${SIZES.selectedSlide.xl[0]}px]`;
+// const SIZES_SELECTED_STRING_HEIGHT = `h-[${SIZES.selectedSlide.xs[1]}px] md:h-[${SIZES.selectedSlide.sm[1]}px] xl:h-[${SIZES.selectedSlide.xl[1]}px]`;
+// const SIZES_STRING_WIDTH = `w-[${SIZES.slide.xs[0]}px] md:w-[${SIZES.slide.sm[0]}px] xl:w-[${SIZES.slide.xl[0]}px]`;
+// const SIZES_STRING_HEIGHT = `h-[${SIZES.slide.xs[1]}px] md:h-[${SIZES.slide.sm[1]}px] xl:h-[${SIZES.slide.xl[1]}px]`;
+
 const ProjectsCarousel = () => {
 	const carouselRef = useRef<HTMLDivElement>(null);
 	const dragStartPosition = useRef(0);
@@ -273,11 +291,11 @@ const ProjectsCarousel = () => {
 
 	const snapToSlide = (slideIndex: number) => {
 		const newPosition =
-			(window.innerWidth < 640
-				? 284 * slideIndex + 10 * slideIndex - 32
+			(window.innerWidth < 768
+				? 284 * slideIndex + 10 * slideIndex - (window.innerWidth / 2 - 357 / 2)
 				: window.innerWidth < 1280
-				? 370 * slideIndex + 10 * slideIndex - 85
-				: 420 * slideIndex + 10 * slideIndex - 85) * -1;
+				? 260 * slideIndex + 10 * slideIndex - 85
+				: 300 * slideIndex + 10 * slideIndex - 85) * -1;
 
 		setCarouselPosition(newPosition);
 	};
@@ -294,11 +312,11 @@ const ProjectsCarousel = () => {
 		info: PanInfo
 	) => {
 		const slideWidth =
-			window.innerWidth < 640
+			window.innerWidth < 768
 				? 284 + 10
 				: window.innerWidth < 1280
-				? 370 + 10
-				: 420 + 10;
+				? 260 + 10
+				: 300 + 10;
 
 		const draggedDistance = info.point.x - dragStartPosition.current;
 
@@ -380,16 +398,16 @@ const ProjectsCarousel = () => {
 						drag='x'
 						dragConstraints={{
 							right:
-								(window.innerWidth < 640
-									? 284 + 10 - 32
+								(window.innerWidth < 768
+									? 284 + 10 - (window.innerWidth / 2 - 357 / 2)
 									: window.innerWidth < 1280
-									? 370 + 10 - 85
-									: 420 + 10 - 85) * -1,
+									? 260 + 10 - 85
+									: 300 + 10 - 85) * -1,
 						}}
 						onDragStart={handleDragStart}
 						onDragEnd={handleDragEnd}
 						animate={{ x: carouselPosition }}
-						className={`w-fit h-[218px] sm:h-[294px] xl:h-[323px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none cursor-grab active:cursor-grabbing`}
+						className={`w-fit h-[218px] md:h-[376px] xl:h-[471px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none cursor-grab active:cursor-grabbing`}
 					>
 						{projects.map(({ title, images }, index) => (
 							<motion.div
@@ -398,8 +416,8 @@ const ProjectsCarousel = () => {
 								data-index={index}
 								className={`${
 									index === currentSlide
-										? 'w-[357px] sm:w-[500px] xl:w-[550px] h-[218px] sm:h-[294px] xl:h-[323px]'
-										: 'w-[284px] sm:w-[370px] xl:w-[420px] h-[174px] sm:h-[217px] xl:h-[247px]'
+										? 'w-[357px] md:w-[640px] xl:w-[800px] h-[218px] md:h-[376px] xl:h-[471px]'
+										: 'w-[284px] md:w-[260px] xl:w-[300px] h-[174px] md:h-[153px] xl:h-[176px]'
 								}`}
 								onMouseDown={handleMouseDown}
 								onMouseUp={handleMouseUp}
@@ -426,7 +444,7 @@ const ProjectsCarousel = () => {
 						))}
 					</motion.div>
 				)}
-				<div className='w-full px-8 sm:px-20 font-alliance flex items-start flex-col'>
+				<div className='w-full px-8 md:px-20 font-alliance flex items-start flex-col'>
 					<AnimatePresence mode='wait'>
 						<motion.div
 							key={projects[currentSlide].title + currentSlide}
@@ -437,7 +455,7 @@ const ProjectsCarousel = () => {
 							className='w-full'
 						>
 							{windowAvailable && (
-								<ul className='w-full xl:w-[550px] h-[100px] xl:h-[70px] mt-[10px] px-[5px] hidden sm:flex place-content-start place-items-start gap-[10px]'>
+								<ul className='w-full xl:w-[800px] h-[100px] xl:h-[70px] mt-[10px] px-[5px] hidden md:flex place-content-start place-items-start gap-[10px]'>
 									{projects[currentSlide].images
 										.slice(0, window.innerWidth < 1280 ? 2 : 4)
 										.map((src, index) => (
@@ -464,7 +482,7 @@ const ProjectsCarousel = () => {
 										))}
 								</ul>
 							)}
-							<div className='w-full xl:w-[550px]'>
+							<div className='w-full xl:w-[800px]'>
 								<div className='mt-[53px] sm:mt-[68px] mb-[27px] sm:mb-[17px] flex flex-col xl:flex-row place-content-between place-items-start xl:place-items-center gap-3 xl:gap-20'>
 									<p className='font-semibold text-[30px] sm:text-[26px]'>
 										{projects[currentSlide].title}
