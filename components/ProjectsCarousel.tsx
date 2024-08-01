@@ -455,7 +455,7 @@ const ProjectsCarousel = () => {
 							className='w-full'
 						>
 							{windowAvailable && (
-								<ul className='w-full xl:w-[800px] h-[100px] xl:h-[70px] mt-[10px] px-[5px] hidden md:flex place-content-start place-items-start gap-[10px]'>
+								<ul className='w-full xl:w-[800px] h-[65px] xl:h-[53px] mt-[10px] px-[5px] hidden md:flex place-content-start place-items-start gap-[10px]'>
 									{projects[currentSlide].images
 										.slice(0, window.innerWidth < 1280 ? 2 : 4)
 										.map((src, index) => (
@@ -463,7 +463,7 @@ const ProjectsCarousel = () => {
 												<button
 													disabled={index === currentSlideImage}
 													onClick={() => setCurrentSlideImage(index)}
-													className='w-[170px] xl:w-[120px] h-full relative'
+													className='w-[110px] xl:w-[90px] h-full relative'
 													style={{
 														opacity: index === currentSlideImage ? 1 : 0.5,
 													}}
@@ -496,15 +496,15 @@ const ProjectsCarousel = () => {
 										</a>
 									</Link>
 								</div>
-								<p className='font-semibold text-[20px] sm:text-[20px] text-[#9f9f9f]'>
+								<p className='font-semibold text-[20px] sm:text-[16px] text-[#9f9f9f]'>
 									{projects[currentSlide].blurb}
 								</p>
-								<div className='mt-[59px] sm:mt-[31px] mb-[59px] sm:mb-[107px] flex flex-wrap place-content-start place-items-start gap-[12px] sm:gap-[22px]'>
+								<div className='mt-[59px] sm:mt-[31px] mb-[59px] sm:mb-[107px] flex flex-wrap place-content-start place-items-start gap-[12px]'>
 									{projects[currentSlide].technologies.map(
 										(technology, index) => (
 											<span
 												key={index}
-												className='px-[22px] font-semibold text-[16px] sm:text-[16px] leading-[40px] sm:leading-[48px] bg-[#002139]'
+												className='px-[12px] py-[8px] font-semibold text-[16px] sm:text-[14px] flex place-content-center place-items-center bg-[#002139]'
 											>
 												{technology}
 											</span>
