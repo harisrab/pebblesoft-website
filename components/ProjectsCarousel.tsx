@@ -266,6 +266,7 @@ const ProjectsCarousel = () => {
 	const [currentSlide, setCurrentSlide] = useState(1);
 	const [currentSlideImage, setCurrentSlideImage] = useState(0);
 	const [carouselPosition, setCarouselPosition] = useState(0);
+	const [clickAllowed, setClickAllowed] = useState(true);
 
 	const dragThreshold = 5;
 
@@ -346,12 +347,17 @@ const ProjectsCarousel = () => {
 	};
 
 	const handleMouseUp = (event: React.MouseEvent<HTMLDivElement>) => {
+		if (!clickAllowed) return;
+
 		const draggedDistance = event.clientX - dragStartPosition.current;
 
 		if (Math.abs(draggedDistance) < dragThreshold) {
 			const slideIndex = Number(event.currentTarget.dataset.index);
 			if (slideIndex && slideIndex !== currentSlide) {
 				runCarousel(slideIndex);
+
+				setClickAllowed(false);
+				setTimeout(() => setClickAllowed(true), 300);
 			}
 		}
 	};
@@ -361,6 +367,8 @@ const ProjectsCarousel = () => {
 	};
 
 	const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+		if (!clickAllowed) return;
+
 		const draggedDistance =
 			event.changedTouches[0].clientX - dragStartPosition.current;
 
@@ -368,6 +376,9 @@ const ProjectsCarousel = () => {
 			const slideIndex = Number(event.currentTarget.dataset.index);
 			if (slideIndex && slideIndex !== currentSlide) {
 				runCarousel(slideIndex);
+
+				setClickAllowed(false);
+				setTimeout(() => setClickAllowed(true), 300);
 			}
 		}
 	};
@@ -407,7 +418,9 @@ const ProjectsCarousel = () => {
 						onDragStart={handleDragStart}
 						onDragEnd={handleDragEnd}
 						animate={{ x: carouselPosition }}
-						className={`w-fit h-[218px] md:h-[376px] xl:h-[471px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none cursor-grab active:cursor-grabbing`}
+						className={`w-fit h-[218px] md:h-[376px] xl:h-[471px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none cursor-grab active:cursor-grabbing ${
+							!clickAllowed ? 'pointer-events-none' : ''
+						}`}
 					>
 						{projects.map(({ title, images }, index) => (
 							<motion.div
