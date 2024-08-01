@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar";
 import Originating from "../components/Originating";
 import WhatWereBuildingSection from "../components/WhatWereBuildingSection";
 import WhyWeDoSections from "../components/WhyWeDoSections";
+import LogoLine from "../components/LogoLine";
 import ProjectsCarousel from "../components/ProjectsCarousel";
 
 const Home: NextPage = () => {
@@ -58,109 +59,8 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        {/* Marquee */}
-        <div className="mb-[150px]">
-          <Marquee speed={60} gradient={false}>
-            <div className="flex items-center justify-between ">
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200 flex items-center">
-                <Image
-                  src="/marquee/dragon_prep.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-
-              <div className="relative w-[200px] h-[25px] ml-5 opacity-60 hover:opacity-50 duration-200 flex items-center">
-                <Image
-                  src="/marquee/elite_education.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[300px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center">
-                <Image
-                  src="/marquee/fanai.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[200px] h-[40px] opacity-30 hover:opacity-50 duration-200  flex items-center">
-                <Image
-                  quality={100}
-                  src="/marquee/govern_health.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
-                <Image
-                  quality={100}
-                  src="/marquee/group-ib.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
-                <Image
-                  quality={100}
-                  src="/marquee/hku_med.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
-                <Image
-                  quality={100}
-                  src="/marquee/leverify.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
-                <Image
-                  quality={100}
-                  src="/marquee/rentya.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
-                <Image
-                  quality={100}
-                  src="/marquee/rino.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
-                <Image
-                  quality={100}
-                  src="/marquee/scholarly_ai_copilot.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-
-              <div className="relative w-[200px] h-[20px] opacity-30 hover:opacity-50 duration-200  flex items-center justify-center">
-                <Image
-                  quality={100}
-                  src="/marquee/university_of_hong_kong.png"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-          </Marquee>
-        </div>
+        {/* Logos */}
+        <LogoLine />
 
         {/* Projects carousel */}
         <ProjectsCarousel />
