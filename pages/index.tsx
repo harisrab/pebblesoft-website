@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         {/* Open Graph tags */}
         <meta property="og:title" content="Pebblesoft" />
         <meta property="og:description" content="We build software that weaves beauty and function." />
-        <meta property="og:image" content="https://pebblesoft-website.vercel.app/og.png" />
+        <meta property="og:image" content="https://pebblesoft-website.vercel.app/og.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pebblesoft-website.vercel.app" />
 
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pebblesoft" />
         <meta name="twitter:description" content="We build software that weaves beauty and function." />
-        <meta name="twitter:image" content="https://pebblesoft-website.vercel.app/og.png" />
+        <meta name="twitter:image" content="https://pebblesoft-website.vercel.app/og.jpg" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
