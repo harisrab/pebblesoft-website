@@ -124,8 +124,8 @@ const PORJECTS = [
 		],
 	},
 	{
-		title: 'Fantastick AI - News article generator for students.',
-		link: 'https://fantasktic.ai/',
+		title: 'Fantastick AI - News article generator',
+		link: 'https://fantasktic.ai/solution-02',
 		images: [
 			'/images/fantastick-ai/fai_1.png',
 			'/images/fantastick-ai/fai_2.png',
@@ -496,28 +496,33 @@ const ProjectsCarousel = () => {
 								</ul>
 							)}
 							<div className='w-full xl:w-[800px]'>
-								<div className='mt-[53px] sm:mt-[68px] mb-[27px] sm:mb-[17px] flex flex-col xl:flex-row place-content-between place-items-start xl:place-items-center gap-3 xl:gap-20'>
-									<p className='font-semibold text-[30px] sm:text-[26px]'>
+								<div className='mt-[53px] sm:mt-[68px] mb-[27px] sm:mb-[5px] flex flex-col xl:flex-row place-content-between place-items-start xl:place-items-center gap-3 xl:gap-20'>
+									{/* Title */}
+									<p className='font-semibold text-[20px] sm:text-[26px]'>
 										{projects[currentSlide].title}
 									</p>
+									{/* Link */}
 									<Link href={projects[currentSlide].link}>
 										<a
 											target={'_blank'}
-											className='xl:max-w-[30%] text-[20px] sm:text-[14px] text-[#9f9f9f] hover:text-[#ffffff] inline-block break-words transition-colors duration-200'
+											className='xl:max-w-[30%] text-[14px] sm:text-[14px] text-[#9f9f9f] hover:text-[#ffffff] inline-block break-words transition-colors duration-200'
 										>
 											{projects[currentSlide].link}
 										</a>
 									</Link>
 								</div>
-								<p className='font-semibold text-[20px] sm:text-[16px] text-[#9f9f9f]'>
+								{/* Blurb */}
+								<p className='font-medium text-[16px] sm:text-[16px] text-[#9f9f9f]'>
 									{projects[currentSlide].blurb}
 								</p>
-								<div className='mt-[59px] sm:mt-[31px] mb-[59px] sm:mb-[107px] flex flex-wrap place-content-start place-items-start gap-[12px]'>
+
+								
+								<div className='mt-[59px] sm:mt-[31px] mb-[50px] sm:mb-[50px] flex flex-wrap place-content-start place-items-start gap-[12px]'>
 									{projects[currentSlide].technologies.map(
 										(technology, index) => (
 											<span
 												key={index}
-												className='px-[12px] py-[8px] font-semibold text-[16px] sm:text-[14px] flex place-content-center place-items-center bg-[#002139]'
+												className='px-[12px] py-[8px] font-semibold text-[12px] sm:text-[12px] flex place-content-center place-items-center bg-[#002139]'
 											>
 												{technology}
 											</span>
@@ -525,11 +530,11 @@ const ProjectsCarousel = () => {
 									)}
 								</div>
 							</div>
-							<div className='w-[86vw] flex flex-col sm:flex-row place-content-between place-items-stretch gap-[73px] sm:gap-[143px]'>
-								<p className='font-normal text-[14px]'>
+							<div className='w-[86vw] flex flex-col sm:flex-row place-content-between place-items-stretch gap-[40px] sm:gap-[110px]'>
+								<p className='font-normal text-[15px]'>
 									{projects[currentSlide].descOne}
 								</p>
-								<p className='font-normal text-[14px]'>
+								<p className='font-normal text-[15px]'>
 									{projects[currentSlide].descTwo}
 								</p>
 							</div>

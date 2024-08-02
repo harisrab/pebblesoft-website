@@ -38,8 +38,8 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
       id="nav-bar"
       className={`sticky -top-[1px] w-full ${
         atTop
-          ? "h-[150px] border-b-[1px] border-opacity-0 border-cwhite"
-          : "h-[100px] backdrop-blur-md bg-opacity-60 border-b-[1px] border-cwhite border-opacity-10"
+          ? "h-[100px] border-b-[1px] border-opacity-0 border-cwhite"
+          : "h-[80px] backdrop-blur-md bg-opacity-60 border-b-[1px] border-cwhite border-opacity-10"
       } duration-150 bg-red-100 flex items-center justify-between px-8 sm:px-20 z-[10000] bg-steel`}
     >
       <AnimatePresence>
@@ -77,7 +77,7 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
         >
           Get started
         </button>
-        <button
+        {/* <button
           onClick={handleMenuPop}
           className={
             menuActive
@@ -131,7 +131,7 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
               />
             </svg>
           )}
-        </button>
+        </button> */}
       </div>
     </div>
   );
