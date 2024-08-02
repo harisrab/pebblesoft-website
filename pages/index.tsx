@@ -6,6 +6,7 @@ import LogoWhite from "../components/LogoWhite";
 import NavBar from "../components/NavBar";
 import ProjectsCarousel from "../components/ProjectsCarousel";
 import WhyWeAreHere from "../components/WhyWeAreHere";
+import Glare from "../components/Glare";
 
 const Home: NextPage = () => {
   const [contactUs, setContactUs] = useState(false);
@@ -46,6 +47,7 @@ const Home: NextPage = () => {
 
       <div className="w-full bg-steel max-w-8xl relative">
         <NavBar contactUs={contactUs} setContactUs={setContactUs} />
+        <Glare />
 
         {/* Hero Section */}
         <div className="w-full flex items-center px-8 sm:px-20 sm:pl-10 py-[150px] mb-[10px] bg-[transparent]">
