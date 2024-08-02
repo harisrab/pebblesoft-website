@@ -71,7 +71,7 @@ const LogoLine = () => {
         </h1>
         <p className="text-cwhite opacity-40">On projects end-to-end</p>
       </div>
-      <div className="flex w-[70%] items-center justify-between h-full">
+      <div className="flex w-[70%] items-center justify-between h-[40px] sm:h-full">
         {logos.map((logo, index) => (
           <Fragment key={index}>
             {logo.src.includes("rentya.png") || logo.src.includes("rino") ? (
