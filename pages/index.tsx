@@ -48,9 +48,9 @@ const Home: NextPage = () => {
         <NavBar contactUs={contactUs} setContactUs={setContactUs} />
 
         {/* Hero Section */}
-        <div className="w-full flex items-center px-8 sm:px-20 sm:pl-10 py-40 mb-[10px] bg-[transparent]">
+        <div className="w-full flex items-center px-8 sm:px-20 sm:pl-10 py-[150px] mb-[10px] bg-[transparent]">
           <div className="w-full flex flex-col sm:items-start  h-full sm:px-[36px] ">
-            <h1 className="font-alliance text-cwhite/[0.2] font-medium text-[38px] sm:text-[40px] max-w-[700px]">
+            <h1 className="font-alliance text-cwhite/[0.2] font-medium text-[38px] sm:text-[50px] max-w-[700px]">
               We <span className="text-cwhite"> build </span> software that
               weaves
               <span className="text-cwhite"> beauty </span>
