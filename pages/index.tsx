@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <div className="">
       <Head>
-        <title>Pebblesoft</title>
+        <title>Pebblesoft Inc.</title>
         <meta
           name="description"
           content="We deliver software that weaves beauty and function."
