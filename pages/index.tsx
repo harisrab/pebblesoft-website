@@ -20,17 +20,17 @@ const Home: NextPage = () => {
           content="We deliver software that weaves beauty and function."
         />
         {/* Open Graph tags */}
-        <meta property="og:title" content="Pebblesoft" />
+        <meta property="og:title" content="Pebblesoft Inc." />
         <meta property="og:description" content="We build software that weaves beauty and function." />
-        <meta property="og:image" content="https://pebblesoft-website.vercel.app/og.jpg" />
+        <meta property="og:image" content="https://pebblesoft.co/og.jpg" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pebblesoft-website.vercel.app" />
+        <meta property="og:url" content="https://pebblesoft.co" />
 
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Pebblesoft" />
+        <meta name="twitter:title" content="Pebblesoft Inc." />
         <meta name="twitter:description" content="We build software that weaves beauty and function." />
-        <meta name="twitter:image" content="https://pebblesoft-website.vercel.app/og.jpg" />
+        <meta name="twitter:image" content="https://pebblesoft.co/og.jpg" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
