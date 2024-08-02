@@ -53,31 +53,31 @@ const PORJECTS = [
       "Chatbot",
     ],
   },
-  {
-    title: "Kno Global",
-    link: "https://kno.vercel.app",
-    images: ["/images/kno-global/kno_1.png", "/images/kno-global/kno_2.png"],
-    blurb:
-      "Convert real-time data into actionable targets for factory managers.",
-    descOne:
-      "Kno Global's vision is to humanise the supply chain. Brands want to avoid the next factory scandal, factories want to reduce cost and make sales, workers want a voice. Kno Global's approach starts with building relationships with workers.",
-    descTwo:
-      "We convert real-time data into actionable targets for factory managers to improve upon. Brands get visibility into supplier performance and improve operational efficiency. Our customers include the world's biggest brands with the goal of reaching 10m workers and establishing a new standard of Transparency for industry.",
-    technologies: [
-      "Compliance",
-      "AI",
-      "Frontend",
-      "Backend",
-      "Maps",
-      "Databases",
-      "Real Time Data",
-      "Data Cleaning",
-      "Data Engineering",
-    ],
-  },
+  //   {
+  //     title: "Kno Global",
+  //     link: "https://kno.vercel.app",
+  //     images: ["/images/kno-global/kno_1.png", "/images/kno-global/kno_2.png"],
+  //     blurb:
+  //       "Convert real-time data into actionable targets for factory managers.",
+  //     descOne:
+  //       "Kno Global's vision is to humanise the supply chain. Brands want to avoid the next factory scandal, factories want to reduce cost and make sales, workers want a voice. Kno Global's approach starts with building relationships with workers.",
+  //     descTwo:
+  //       "We convert real-time data into actionable targets for factory managers to improve upon. Brands get visibility into supplier performance and improve operational efficiency. Our customers include the world's biggest brands with the goal of reaching 10m workers and establishing a new standard of Transparency for industry.",
+  //     technologies: [
+  //       "Compliance",
+  //       "AI",
+  //       "Frontend",
+  //       "Backend",
+  //       "Maps",
+  //       "Databases",
+  //       "Real Time Data",
+  //       "Data Cleaning",
+  //       "Data Engineering",
+  //     ],
+  //   },
   {
     title: "Elite Portal",
-    link: "https://kno.vercel.app",
+    link: "https://eliteportal.vercel.app/",
     images: [
       "/images/elite-portal/eliteportal_1.png",
       "/images/elite-portal/eliteportal_2.png",
@@ -108,9 +108,9 @@ const PORJECTS = [
     blurb:
       "Convert real-time data into actionable targets for factory managers.",
     descOne:
-      "Kno Global's vision is to humanize the supply chain. Brands want to avoid the next factory scandal, factories want to reduce cost and make sales, workers want a voice. Kno Global's approach starts with building relationships with workers.",
+      "Elite Portal is an internal software used by Elite Education to manage admissions, applications, and track records for students who are applying to universities and colleges in the United States, United Kingdom, and Hong Kong.",
     descTwo:
-      "We convert real-time data into actionable targets for factory managers to improve upon. Brands get visibility into supplier performance and improve operational efficiency. Our customers include the world's biggest brands with the goal of reaching 10m workers and establishing a new standard of Transparency for industry.",
+      "Different stakeholders can log into the system such as teachers and tutors who can not only manage student records, but quickly create applications on Common App, direct applications to universities and schools.",
     technologies: [
       "Compliance",
       "AI",
