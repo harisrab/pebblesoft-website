@@ -67,17 +67,17 @@ const LogoLine = () => {
     <div className="relative w-full h-[200px] lg:h-[50px] sm:px-20 flex-col lg:flex-row flex place-content-between place-items-center gap-[2.5%]">
       <div className="h-full w-full sm:w-[400px] flex flex-col items-center lg:items-start">
         <h1 className="font-semibold text-cwhite text-[20px]">
-          Our clients from around the world
+          Partnering with Innovators
         </h1>
-        <p className="text-cwhite opacity-40">From startups to enterprises</p>
+        <p className="text-cwhite opacity-40">
+          From Startups to Global Enterprises
+        </p>
       </div>
       <div className="flex w-[70%] items-center justify-between h-[40px] sm:h-full">
         {logos.map((logo, index) => (
           <Fragment key={index}>
             {logo.src.includes("rentya.png") || logo.src.includes("rino") ? (
-              <div
-                className="w-[17.5%] lg:w-[15.5%] h-full overflow-hidden flex items-center"
-              >
+              <div className="w-[17.5%] lg:w-[15.5%] h-full overflow-hidden flex items-center">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={logo.src + logo.alt + activeIndex}
@@ -101,9 +101,7 @@ const LogoLine = () => {
                 </AnimatePresence>
               </div>
             ) : (
-              <div
-                className="w-[28.5%] lg:w-[15.5%] h-full overflow-hidden"
-              >
+              <div className="w-[28.5%] lg:w-[15.5%] h-full overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={logo.src + logo.alt + activeIndex}
