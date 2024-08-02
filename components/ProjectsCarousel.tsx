@@ -249,7 +249,7 @@ const PORJECTS = [
 // 	slide: {
 // 		xl: [300, 176],
 // 		sm: [260, 153],
-// 		xs: [284, 174],
+// 		xs: [211, 124],
 // 	},
 // };
 
@@ -293,7 +293,7 @@ const ProjectsCarousel = () => {
 	const snapToSlide = (slideIndex: number) => {
 		const newPosition =
 			(window.innerWidth < 768
-				? 284 * slideIndex + 10 * slideIndex - (window.innerWidth / 2 - 357 / 2)
+				? 211 * slideIndex + 10 * slideIndex - 32
 				: window.innerWidth < 1280
 				? 260 * slideIndex + 10 * slideIndex - 85
 				: 300 * slideIndex + 10 * slideIndex - 85) * -1;
@@ -314,7 +314,7 @@ const ProjectsCarousel = () => {
 	) => {
 		const slideWidth =
 			window.innerWidth < 768
-				? 284 + 10
+				? 211 + 10
 				: window.innerWidth < 1280
 				? 260 + 10
 				: 300 + 10;
@@ -410,7 +410,7 @@ const ProjectsCarousel = () => {
 						dragConstraints={{
 							right:
 								(window.innerWidth < 768
-									? 284 + 10 - (window.innerWidth / 2 - 357 / 2)
+									? 211 + 10 - 32
 									: window.innerWidth < 1280
 									? 260 + 10 - 85
 									: 300 + 10 - 85) * -1,
@@ -418,7 +418,7 @@ const ProjectsCarousel = () => {
 						onDragStart={handleDragStart}
 						onDragEnd={handleDragEnd}
 						animate={{ x: carouselPosition }}
-						className={`w-fit h-[218px] md:h-[376px] xl:h-[471px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none cursor-grab active:cursor-grabbing ${
+						className={`w-fit h-[calc((100vw-64px)/1.7)] md:h-[376px] xl:h-[471px] relative flex place-content-start place-items-start gap-[10px] translate-x-[-262px] sm:translate-x-[-506px] touch-none cursor-grab active:cursor-grabbing ${
 							!clickAllowed ? 'pointer-events-none' : ''
 						}`}
 					>
@@ -429,8 +429,8 @@ const ProjectsCarousel = () => {
 								data-index={index}
 								className={`${
 									index === currentSlide
-										? 'w-[357px] md:w-[640px] xl:w-[800px] h-[218px] md:h-[376px] xl:h-[471px]'
-										: 'w-[284px] md:w-[260px] xl:w-[300px] h-[174px] md:h-[153px] xl:h-[176px]'
+										? 'w-[calc(100vw-64px)] md:w-[640px] xl:w-[800px] h-[calc((100vw-64px)/1.7)] md:h-[376px] xl:h-[471px]'
+										: 'w-[211px] md:w-[260px] xl:w-[300px] h-[124px] md:h-[153px] xl:h-[176px]'
 								}`}
 								onMouseDown={handleMouseDown}
 								onMouseUp={handleMouseUp}
@@ -516,7 +516,6 @@ const ProjectsCarousel = () => {
 									{projects[currentSlide].blurb}
 								</p>
 
-								
 								<div className='mt-[59px] sm:mt-[31px] mb-[50px] sm:mb-[50px] flex flex-wrap place-content-start place-items-start gap-[12px]'>
 									{projects[currentSlide].technologies.map(
 										(technology, index) => (
