@@ -67,7 +67,7 @@ const LogoLine = () => {
     <div className="relative w-full h-[200px] lg:h-[50px] sm:px-20 flex-col lg:flex-row flex place-content-between place-items-center gap-[2.5%]">
       <div className="h-full w-[400px] flex flex-col items-center lg:items-start">
         <h1 className="font-semibold text-cwhite text-[20px]">
-          Some people we've worked with
+          Some people we&apos;ve worked with
         </h1>
         <p className="text-cwhite opacity-40">On projects end-to-end</p>
       </div>
