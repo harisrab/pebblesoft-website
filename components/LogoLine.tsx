@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 const LOGOS = [
   { src: "/logo-line/dragon_prep.png", alt: "dragon_prep_logo" },
@@ -65,18 +65,17 @@ const LogoLine = () => {
 
   return (
     <div className="relative w-full h-[200px] lg:h-[50px] sm:px-20 flex-col lg:flex-row flex place-content-between place-items-center gap-[2.5%]">
-      <div className="h-full w-[400px] flex flex-col items-center lg:items-start">
+      <div className="h-full w-full sm:w-[400px] flex flex-col items-center lg:items-start">
         <h1 className="font-semibold text-cwhite text-[20px]">
           Some people we&apos;ve worked with
         </h1>
         <p className="text-cwhite opacity-40">On projects end-to-end</p>
       </div>
-      <div className="flex w-[70%] items-center justify-between h-full">
+      <div className="flex w-[70%] items-center justify-between h-[40px] sm:h-full">
         {logos.map((logo, index) => (
-          <>
+          <Fragment key={index}>
             {logo.src.includes("rentya.png") || logo.src.includes("rino") ? (
               <div
-                key={index}
                 className="w-[17.5%] lg:w-[15.5%] h-full overflow-hidden flex items-center"
               >
                 <AnimatePresence mode="wait">
@@ -103,7 +102,6 @@ const LogoLine = () => {
               </div>
             ) : (
               <div
-                key={index}
                 className="w-[28.5%] lg:w-[15.5%] h-full overflow-hidden"
               >
                 <AnimatePresence mode="wait">
@@ -129,7 +127,7 @@ const LogoLine = () => {
                 </AnimatePresence>
               </div>
             )}
-          </>
+          </Fragment>
         ))}
       </div>
     </div>
