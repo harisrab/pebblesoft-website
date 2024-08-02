@@ -9,7 +9,7 @@ const Glare = () => {
             transition={{ duration: 0.5, ease: 'easeInOut' }}
 			viewBox='0 0 1241 1296'
 			fill='none'
-			className='w-full absolute inset-0 origin-top-left z-[999999]'
+			className='w-full absolute inset-0 origin-top-left z-[999999] pointer-events-none'
 		>
 			<ellipse
 				cx='-151.199'
