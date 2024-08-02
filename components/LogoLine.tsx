@@ -67,9 +67,9 @@ const LogoLine = () => {
     <div className="relative w-full h-[200px] lg:h-[50px] sm:px-20 flex-col lg:flex-row flex place-content-between place-items-center gap-[2.5%]">
       <div className="h-full w-full sm:w-[400px] flex flex-col items-center lg:items-start">
         <h1 className="font-semibold text-cwhite text-[20px]">
-          Some people we&apos;ve worked with
+          Our clients from around the world
         </h1>
-        <p className="text-cwhite opacity-40">On projects end-to-end</p>
+        <p className="text-cwhite opacity-40">From startups to enterprises</p>
       </div>
       <div className="flex w-[70%] items-center justify-between h-[40px] sm:h-full">
         {logos.map((logo, index) => (
