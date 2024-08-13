@@ -6,6 +6,8 @@ import Link from "next/link";
 import MainMenu from "./MainMenu";
 import ContactUs from "./ContactUs";
 
+const GET_STARTED_LINK = 'https://tally.so/r/wAxrpl'
+
 const NavBar = ({ contactUs, setContactUs }: any) => {
   const [menuBtn, setMenuBtn] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
@@ -65,8 +67,10 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
         id="right-btns"
         className="flex items-center gap-6 font-alliance font-normal z-[1000]"
       >
-        <button
-          onClick={handleContactPop}
+        <Link href={GET_STARTED_LINK}>
+        <a
+          // onClick={handleContactPop}
+          target={'_blank'}
           className={`border hidden sm:flex ${
             menuActive
               ? "bg-transparent hover:bg-[#fff] text-[#fff] hover:text-steel border-[#fff]"
@@ -76,7 +80,7 @@ const NavBar = ({ contactUs, setContactUs }: any) => {
           } px-14 py-2 hover:bg-steel  duration-200`}
         >
           Get started
-        </button>
+        </a></Link>
         {/* <button
           onClick={handleMenuPop}
           className={
