@@ -75,6 +75,7 @@ const Home: NextPage = () => {
                 muted
                 src="/hero_video.mov"
                 style={{ filter: 'grayscale(60%)' }}
+                playsInline
               />
             </div>
 
