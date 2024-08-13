@@ -73,7 +73,7 @@ const Home: NextPage = () => {
                 autoPlay
                 loop
                 muted
-                src="/hero_video.mov"
+                src="/hero_video.webm"
                 style={{ filter: 'grayscale(60%)' }}
                 playsInline
               />
