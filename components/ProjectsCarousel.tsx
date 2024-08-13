@@ -521,7 +521,7 @@ const ProjectsCarousel = () => {
                     (technology, index) => (
                       <span
                         key={index}
-                        className="px-[12px] py-[8px] font-semibold text-[12px] sm:text-[12px] flex place-content-center place-items-center bg-[#002139]"
+                        className="px-[12px] py-[8px] font-semibold text-[12px] sm:text-[12px] flex place-content-center place-items-center bg-[#1d1d1d]"
                       >
                         {technology}
                       </span>
