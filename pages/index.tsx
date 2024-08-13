@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
+import Glare from "../components/Glare";
 import LogoLine from "../components/LogoLine";
 import LogoWhite from "../components/LogoWhite";
 import NavBar from "../components/NavBar";
 import ProjectsCarousel from "../components/ProjectsCarousel";
 import WhyWeAreHere from "../components/WhyWeAreHere";
-import Glare from "../components/Glare";
 
 const Home: NextPage = () => {
   const [contactUs, setContactUs] = useState(false);
@@ -21,7 +21,10 @@ const Home: NextPage = () => {
         />
         {/* Open Graph tags */}
         <meta property="og:title" content="Pebblesoft Inc." />
-        <meta property="og:description" content="We build software that weaves beauty and function." />
+        <meta
+          property="og:description"
+          content="We build software that weaves beauty and function."
+        />
         <meta property="og:image" content="https://pebblesoft.co/og.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pebblesoft.co" />
@@ -29,7 +32,10 @@ const Home: NextPage = () => {
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pebblesoft Inc." />
-        <meta name="twitter:description" content="We build software that weaves beauty and function." />
+        <meta
+          name="twitter:description"
+          content="We build software that weaves beauty and function."
+        />
         <meta name="twitter:image" content="https://pebblesoft.co/og.jpg" />
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -51,7 +57,7 @@ const Home: NextPage = () => {
 
         {/* Hero Section */}
         <div className="w-full flex items-center px-8 sm:px-20 sm:pl-10 py-[150px] mb-[10px] bg-[transparent]">
-          <div className="w-full flex flex-col sm:items-start  h-full sm:px-[36px] ">
+          <div className="w-full flex flex-col items-center justify-between lg:flex-row lg:items-start  h-full sm:pl-[36px] ">
             <h1 className="font-alliance text-cwhite/[0.2] font-medium text-[38px] sm:text-[50px] max-w-[700px]">
               We <span className="text-cwhite"> build </span> software that
               weaves
@@ -59,6 +65,17 @@ const Home: NextPage = () => {
               and
               <span className="text-cwhite"> function </span>
             </h1>
+
+            <div className="lg:w-[45%] w-full relative mt-10 sm:mt-20 lg:mt-0 h-[250px] lg:h-[350px] overflow-hidden">
+              <div className="absolute w-full h-full top-0 left-0 bottom-0 right-0 bg-steel opacity-50 z-10"></div>
+              <video
+                className="h-[150%] sm:h-[200%] lg:h-[120%] object-center object-cover z-1"
+                autoPlay
+                loop
+                muted
+                src="/hero_video.mov"
+              />
+            </div>
 
             <button
               onClick={() => setContactUs(true)}
