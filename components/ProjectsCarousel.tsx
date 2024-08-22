@@ -29,6 +29,28 @@ const PORJECTS = [
     ],
   },
   {
+    title: "Govern X - Supplier Research Tool",
+    link: "https://governcorp.com",
+    images: ["/govern-suppliers/supplier-research-platform.png"],
+    blurb:
+      "Intelligent system that recommends product suppliers by learning from history.",
+    descOne:
+      "This supplier research tool is designed for a multi-million dollar North American distributor. It leverages historical data to predict volatile supplier lead times and presents the solution in an easy-to-use interface.",
+    descTwo:
+      "This tool intelligently recommends product suppliers with the lowest lead times, enabling efficient sourcing and procurement processes for the distributor.",
+    technologies: [
+      "Compliance",
+      "AI",
+      "Frontend",
+      "Backend",
+      "Maps",
+      "Databases",
+      "Real Time Data",
+      "Data Cleaning",
+      "Data Engineering",
+    ],
+  },
+  {
     title: "Health App - Doctor's Operating Terminal",
     link: "https://health.governcorp.com/",
     images: [
@@ -53,28 +75,29 @@ const PORJECTS = [
       "Chatbot",
     ],
   },
-  //   {
-  //     title: "Kno Global",
-  //     link: "https://kno.vercel.app",
-  //     images: ["/images/kno-global/kno_1.png", "/images/kno-global/kno_2.png"],
-  //     blurb:
-  //       "Convert real-time data into actionable targets for factory managers.",
-  //     descOne:
-  //       "Kno Global's vision is to humanise the supply chain. Brands want to avoid the next factory scandal, factories want to reduce cost and make sales, workers want a voice. Kno Global's approach starts with building relationships with workers.",
-  //     descTwo:
-  //       "We convert real-time data into actionable targets for factory managers to improve upon. Brands get visibility into supplier performance and improve operational efficiency. Our customers include the world's biggest brands with the goal of reaching 10m workers and establishing a new standard of Transparency for industry.",
-  //     technologies: [
-  //       "Compliance",
-  //       "AI",
-  //       "Frontend",
-  //       "Backend",
-  //       "Maps",
-  //       "Databases",
-  //       "Real Time Data",
-  //       "Data Cleaning",
-  //       "Data Engineering",
-  //     ],
-  //   },
+  {
+    title: "Kno Global",
+    link: "https://kno.vercel.app",
+    images: ["/images/kno-global/kno_1.png", "/images/kno-global/kno_2.png"],
+    blurb:
+      "Convert real-time data into actionable targets for factory managers.",
+    descOne:
+      "Kno Global's vision is to humanise the supply chain. Brands want to avoid the next factory scandal, factories want to reduce cost and make sales, workers want a voice. Kno Global's approach starts with building relationships with workers.",
+    descTwo:
+      "We convert real-time data into actionable targets for factory managers to improve upon. Brands get visibility into supplier performance and improve operational efficiency. Our customers include the world's biggest brands with the goal of reaching 10m workers and establishing a new standard of Transparency for industry.",
+    technologies: [
+      "Compliance",
+      "AI",
+      "Frontend",
+      "Backend",
+      "Maps",
+      "Databases",
+      "Real Time Data",
+      "Data Cleaning",
+      "Data Engineering",
+    ],
+  },
+
   {
     title: "Elite Portal",
     link: "https://eliteportal.vercel.app/",
