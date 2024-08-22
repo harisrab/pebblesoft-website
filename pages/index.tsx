@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 import Glare from "../components/Glare";
 import LogoLine from "../components/LogoLine";
@@ -74,17 +75,23 @@ const Home: NextPage = () => {
                 loop
                 muted
                 src="/hero_video.webm"
-                style={{ filter: 'grayscale(60%)' }}
+                style={{ filter: "grayscale(60%)" }}
                 playsInline
               />
             </div>
 
-            <button
-              onClick={() => setContactUs(true)}
-              className={`border w-[200px] items-center flex bg-cwhite text-steel sm:hidden  ${"bg-steel hover:text-[#fff] border-steel"} px-14 py-2 hover:bg-steel mt-10  duration-200`}
+            <Link
+              href={
+                "https://cal.com/harisrab/pebblesoft-inc-initial-consultation"
+              }
             >
-              Get started
-            </button>
+              <button
+                onClick={() => setContactUs(true)}
+                className={`border w-[200px] items-center flex bg-cwhite text-steel sm:hidden  ${"bg-steel hover:text-[#fff] border-steel"} px-14 py-2 hover:bg-steel mt-10  duration-200`}
+              >
+                Get started
+              </button>
+            </Link>
           </div>
         </div>
 

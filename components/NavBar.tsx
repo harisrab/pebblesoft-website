@@ -6,7 +6,7 @@ import Link from "next/link";
 import MainMenu from "./MainMenu";
 import ContactUs from "./ContactUs";
 
-const GET_STARTED_LINK = 'https://tally.so/r/wAxrpl'
+const GET_STARTED_LINK = 'https://cal.com/harisrab/pebblesoft-inc-initial-consultation'
 
 const NavBar = ({ contactUs, setContactUs }: any) => {
   const [menuBtn, setMenuBtn] = useState(false);
